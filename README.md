@@ -1,17 +1,17 @@
-##Maturitní projekt
+## Maturitní projekt
 
-#Robotické rameno ovládané gesty
+# Robotické rameno ovládané gesty
 
-#Cíle projektu:
-    -zprovoznit fungování robotického ramena pomoci gest
+# Cíle projektu:
+    - zprovoznit fungování robotického ramena pomoci gest
 
-#Konzultanti:
-    -Mgr. Marcel Godovský
+# Konzultanti:
+    - Mgr. Marcel Godovský
 
-#Softwares:
-    -Pycharm (OpenCV library, Mediapipe library, PySerial library),
-    -Python, 
-    -Arduino IDE
-#Časový harmonogram:
+# Softwares:
+    - Pycharm (OpenCV library, Mediapipe library, PySerial library),
+    - Python, 
+    - Arduino IDE
+# Časový harmonogram:
     
     
