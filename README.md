@@ -13,5 +13,10 @@
 - Python, 
 - Arduino IDE
 ## Časový harmonogram:
-    
+
+
+
+##Reference
+- https://kostasthanos.com/projects/hand_detection_and_finger_counting.php
+- https://www.youtube.com/watch?v=v-XcmsYlzjA
     
