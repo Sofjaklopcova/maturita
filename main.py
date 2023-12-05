@@ -11,6 +11,10 @@ mpDraw = mp.solutions.drawing_utils
 finger_Coord = [(8, 6), (12, 10), (16, 14), (20, 18)]
 thumb_Coord = (4,2)
 
+# distance - min: 2 max: 320 (me)
+#
+
+
 while True:
     success, image = cap.read()
     imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)

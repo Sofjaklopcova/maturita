@@ -7,8 +7,6 @@ ArduinoSerial = serial.Serial(com, 9600)
 time.sleep(2)
 # ArduinoSerial.readline() - cteni z arduina
 # ArduinoSerial.write('1') - poslani do arduina
-# posilani hodnot do arduina, nasledne cteni z arduina (platformIO) a pak v platformIO to hybani
-# nebo to cele udelat v pythonu netusim jak protoze pristup k pinum jsem nenasla
 print("uvodni pozdrav")
 
 while 1:
