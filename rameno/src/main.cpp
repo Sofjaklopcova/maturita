@@ -59,25 +59,26 @@ end = true;
 }
  
 void loop() {
-
  
    if(end == true) {
       Serial.println("vstup povolen");
-     serialData= Serial.read();
+
+           serialData= Serial.read();
  serialData = serialData - '0';
- if((serialData < servoPose +1 || serialData > 0) && serialData != -49 ) {
+ Serial.println(serialData);
+ if((serialData < servoPose +1 || serialData > 0 +1) && serialData != -49 ) {
    end = false;
+    data = serialData;
+    Serial.println(data);
+    Serial.end();
  }
    }
   
 
-
    if(end == false) {
-    data = serialData;
-    Serial.println(data);
 int cycle = 0;
 
-for(int j = 0 ; j < servoMoves[data][0];j++) {
+for(int j = 0 ; j < servoMoves[data -1][0];j++) {
 for(int i = 1; i < servoCount;i++) {
 
   //Serial.println(servoValues[data][i -1]);
@@ -90,15 +91,17 @@ for(int i = 1; i < servoCount;i++) {
 cycle++;
 if(cycle > 1) cycle=0;
 
-delay(servoMoves[data][2]);
-if(j == (servoMoves[data][0] -1)) end = true;
-Serial.readln("konec");
+if(j == (servoMoves[data][0] -1)) {
+   end = true;
+  Serial.begin(9600);
 
 }
+delay(servoMoves[data -1][1]);
+
   }
 
 
-
+   }
 
 
 //x = map(x, min,max,10,170);
