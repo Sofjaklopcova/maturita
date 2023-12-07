@@ -1,9 +1,9 @@
 import serial
 import time
-com = "com6" # nastaveni portu arduina
+com = "com7" # nastaveni portu arduina
 
 
-ArduinoSerial = serial.Serial(com, 9600)
+ArduinoSerial = serial.Serial(com, 9600,timeout=0.05)
 time.sleep(2)
 # ArduinoSerial.readline() - cteni z arduina
 # ArduinoSerial.write('1') - poslani do arduina

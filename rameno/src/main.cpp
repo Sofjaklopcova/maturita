@@ -4,7 +4,10 @@
 const int min = 2;
 const int max = 320;
 
+bool end;
 int data = 0;
+int serialData =0;
+
 int x = 0;
 const int servoPose = 3; //kolik stavu má rameno
 const int servoCount = 4; // počet serv
@@ -45,7 +48,6 @@ int servoMoves [servoPose] [3] = {
 };
 
 
-bool end;
 
 void setup() {
   Serial.begin(9600);
@@ -53,22 +55,33 @@ void setup() {
   servo[i].attach(servoPins[i]);
   //if(i > 0) servo[i].write(servoValues[0][i -1]);
 }
+end = true;
 }
  
 void loop() {
-data= Serial.read();
-data = data - '0';
-if(data < servoPose || data > -1) {
-  end = false;
-//Serial.println(data);
-if(end == false) {
+
+ 
+   if(end == true) {
+      Serial.println("vstup povolen");
+     serialData= Serial.read();
+ serialData = serialData - '0';
+ if((serialData < servoPose +1 || serialData > 0) && serialData != -49 ) {
+   end = false;
+ }
+   }
+  
+
+
+   if(end == false) {
+    data = serialData;
+    Serial.println(data);
 int cycle = 0;
 
 for(int j = 0 ; j < servoMoves[data][0];j++) {
 for(int i = 1; i < servoCount;i++) {
 
   //Serial.println(servoValues[data][i -1]);
- servo[i].write(servoValues[(servoMoves[data][1])+cycle][i -1]);
+ servo[i].write(servoValues[(servoMoves[data -1][1])+cycle][i -1]);
  //if(cycle ==1 && i == 2) delay(500);
  //if(cycle == 0 && i == 3) delay(500);0
 
@@ -76,19 +89,20 @@ for(int i = 1; i < servoCount;i++) {
 
 cycle++;
 if(cycle > 1) cycle=0;
-Serial.println(j);
-Serial.println(end);
 
-if(j == (servoMoves[data][0] -1)) end = true;
 delay(servoMoves[data][2]);
+if(j == (servoMoves[data][0] -1)) end = true;
+Serial.readln("konec");
+
 }
-}
+  }
+
 
 
 
 
 //x = map(x, min,max,10,170);
 //servo[0].write(x);
-}
+
 }
 
