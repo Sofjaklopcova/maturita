@@ -9,7 +9,7 @@ int data = 0;
 int serialData =0;
 
 int x = 0;
-const int servoPose = 3; //kolik stavu má rameno
+const int servoPose = 4; //kolik stavu má rameno
 const int servoCount = 4; // počet serv
 
  Servo servo[4]; // pole pro serva 
@@ -26,10 +26,12 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 
 
 
-int servoValues [7] [3] = {
-   {20,50,20},
-   {119,112,45}, //dole sběr kuličky
-   {167,80,79},  //vhozeni kuličky nahorů
+int servoValues [9] [3] = {
+   {20,50,20},  //puvodni stav 
+   {170,80,45}, //dole sběr kuličky part1
+   {119,112,45}, //dolu sběr kuličky part2
+   {170,80,45},  //vhozeni kuličky nahorů part1
+   {170,80,86}, // vhozeni kuličky nahorů part2
    {120,34,15}, //ne part1 
    {120,34,105},  //ne part2
    {160,72,90},  // ano part1
@@ -38,9 +40,10 @@ int servoValues [7] [3] = {
 };
 
 int servoMoves [servoPose] [3] = {
-  {2,1,2000}, //nahoru dolluu
-  {5,3,700}, //ne
-  {5,5,1000}, //ano
+  {2,1,500}, //dolluu ke kulice
+  {2,3,500}, //nahoru ke kulice
+  {5,5,700}, //ne
+  {5,7,1000} //ano
   
   
 
@@ -53,7 +56,7 @@ void setup() {
   Serial.begin(9600);
   for(int i = 0; i < servoCount;i++) {
   servo[i].attach(servoPins[i]);
-  //if(i > 0) servo[i].write(servoValues[0][i -1]);
+  if(i > 0) servo[i].write(servoValues[0][i -1]);
 }
 end = true;
 }
@@ -66,9 +69,9 @@ void loop() {
            serialData= Serial.read();
  serialData = serialData - '0';
  Serial.println(serialData);
- if((serialData < servoPose +1 || serialData > 0 +1) && serialData != -49 ) {
+ if((serialData < servoPose +1 && serialData > 0)) {
    end = false;
-    data = serialData;
+    data = serialData -1;
     Serial.println(data);
     Serial.end();
  }
@@ -78,11 +81,11 @@ void loop() {
    if(end == false) {
 int cycle = 0;
 
-for(int j = 0 ; j < servoMoves[data -1][0];j++) {
+for(int j = 0 ; j < servoMoves[data][0];j++) {
 for(int i = 1; i < servoCount;i++) {
 
   //Serial.println(servoValues[data][i -1]);
- servo[i].write(servoValues[(servoMoves[data -1][1])+cycle][i -1]);
+ servo[i].write(servoValues[(servoMoves[data][1])+cycle][i -1]);
  //if(cycle ==1 && i == 2) delay(500);
  //if(cycle == 0 && i == 3) delay(500);0
 
@@ -96,7 +99,7 @@ if(j == (servoMoves[data][0] -1)) {
   Serial.begin(9600);
 
 }
-delay(servoMoves[data -1][1]);
+delay(servoMoves[data][2]);
 
   }
 
