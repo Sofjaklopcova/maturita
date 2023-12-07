@@ -29,3 +29,4 @@ Routes==2.5.1
 six==1.16.0
 sounddevice==0.4.6
 zipp==3.17.0
+pyserial==3.5

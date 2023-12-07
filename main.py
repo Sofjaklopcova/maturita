@@ -4,22 +4,48 @@ import keyboard as keyboard
 import mediapipe as mp
 import serial
 import time
-com = "com7" # nastaveni portu arduina
+import threading as th
 
-
-ArduinoSerial = serial.Serial(com, 9600)
-time.sleep(0.5)
-
-upCount =0
+upCount = 0
 cap = cv2.VideoCapture(0)
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
 mpDraw = mp.solutions.drawing_utils
 finger_Coord = [(8, 6), (12, 10), (16, 14), (20, 18)]
-thumb_Coord = (4,2)
+thumb_Coord = (4, 2)
+
+com = "com7"  # nastaveni portu arduina
+change = False
+delay = 4
+mode = 1
+
 
 # distance - min: 2 max: 320 (me)
-#
+
+
+def arduinoWrite():
+    global delay, change, mode
+    arduinoSerial = serial.Serial(com, 9600)
+    time.sleep(delay)
+    if change is False:
+        arduinoSerial.write(bytes(str(upCount), 'UTF-8'))
+        print(upCount)
+        if upCount is 1 or upCount is 2:
+            delay = 1000
+            mode = upCount
+            change = True
+
+    else:
+        arduinoSerial.write(bytes(str(distance), 'UTF-8'))
+        print(distance)
+        if (distance < 30 and mode == 1) or (distance > 50 and mode == 2):
+            delay = 4000
+            change = False
+    return
+
+
+t1 = th.Thread(target=arduinoWrite, )
+t1.start()
 
 
 while True:
@@ -32,7 +58,7 @@ while True:
     if results.multi_hand_landmarks:
         handList = []
 
-        for handLms in results.multi_hand_landmarks: # working with each hand
+        for handLms in results.multi_hand_landmarks:  # working with each hand
             for id, lm in enumerate(handLms.landmark):
                 h, w, c = image.shape
                 cx, cy = int(lm.x * w), int(lm.y * h)
@@ -45,36 +71,20 @@ while True:
                 if handList[thumb_Coord[0]][0] > handList[thumb_Coord[1]][0]:
                     upCount += 1
 
-
-
-                distance = math.sqrt(pow(handList[8][0]- handList[4][0],2) + pow(handList[8][1] - handList[4][1],2))
+                distance = math.sqrt(pow(handList[8][0] - handList[4][0], 2) + pow(handList[8][1] - handList[4][1], 2))
 
                 print("--------")
                 print(handList[7])
                 print(handList[3])
                 print("---------")
-                #print(abs(distance))
+                # print(abs(distance))
 
-
-
-                cv2.circle(image,handList[8], 25, (255, 0, 255), cv2.FILLED)
-                cv2.circle(image,handList[4], 25, (255, 0, 255), cv2.FILLED)
-
+                cv2.circle(image, handList[8], 25, (255, 0, 255), cv2.FILLED)
+                cv2.circle(image, handList[4], 25, (255, 0, 255), cv2.FILLED)
 
                 mpDraw.draw_landmarks(image, handLms, mpHands.HAND_CONNECTIONS)
     cv2.imshow("Output", image)
-    print(upCount)
-    if upCount == 1:
-        ArduinoSerial.write(bytes('1', 'UTF-8'))
-
-    if upCount == 2:
-        ArduinoSerial.write(bytes('2', 'UTF-8'))
-    if upCount == 0:
-        ArduinoSerial.write(bytes('0', 'UTF-8'))
-
-    if upCount == 3:
-        ArduinoSerial.write(bytes('3', 'UTF-8'))
     cv2.waitKey(1)
     if keyboard.is_pressed("q") or keyboard.is_pressed("esc"):
-        ArduinoSerial.close()
+        #  ArduinoSerial.close()
         break

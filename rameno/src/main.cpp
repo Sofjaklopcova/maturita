@@ -1,15 +1,16 @@
 #include <Servo.h>
 #include <Arduino.h>
 
-const int min = 2;
-const int max = 320;
+const int min= -1;  //
+const int max = 10; //
 
 bool end;
 int data = 0;
 int serialData =0;
 
-int x = 0;
-const int servoPose = 4; //kolik stavu má rameno
+bool changeMode;
+int mode;
+const int servoPose = 5; //kolik stavu má rameno
 const int servoCount = 4; // počet serv
 
  Servo servo[4]; // pole pro serva 
@@ -24,18 +25,23 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 //první nižší doleva
 // druhé nižší nahorů
 
+// servo0 20
 
 
-int servoValues [9] [3] = {
+
+int servoValues [11] [3] = {
    {20,50,20},  //puvodni stav 
    {170,80,45}, //dole sběr kuličky part1
-   {119,112,45}, //dolu sběr kuličky part2
+   {122,113,45}, //dolu sběr kuličky part2
    {170,80,45},  //vhozeni kuličky nahorů part1
    {170,80,86}, // vhozeni kuličky nahorů part2
    {120,34,15}, //ne part1 
-   {120,34,105},  //ne part2
+   {120,34,90},  //ne part2 
    {160,72,90},  // ano part1
-   {105,65,90}   //ano part2
+   {105,65,90},  //ano part2
+   {170,80,150}, //uklona part1
+   {25,170,150}  //uklona part2
+
 
 };
 
@@ -43,7 +49,8 @@ int servoMoves [servoPose] [3] = {
   {2,1,500}, //dolluu ke kulice
   {2,3,500}, //nahoru ke kulice
   {5,5,700}, //ne
-  {5,7,1000} //ano
+  {5,7,1000}, //ano
+  {2,9,2000} //uklona
   
   
 
@@ -59,35 +66,57 @@ void setup() {
   if(i > 0) servo[i].write(servoValues[0][i -1]);
 }
 end = true;
+changeMode = false;
 }
  
 void loop() {
  
    if(end == true) {
-      Serial.println("vstup povolen");
-
+   // Serial.println("vstup povolen");
            serialData= Serial.read();
  serialData = serialData - '0';
- Serial.println(serialData);
- if((serialData < servoPose +1 && serialData > 0)) {
+ //Serial.println(changeMode);
+
+
+ if((serialData < servoPose +1 && serialData > 0 && changeMode == false) ||
+  (serialData < max && serialData > min && changeMode == true)) {
+Serial.println(serialData);
+ if(changeMode == false) data = serialData -1;
+ if(changeMode) data = map(serialData, min,max,5,170);
+
    end = false;
-    data = serialData -1;
-    Serial.println(data);
     Serial.end();
  }
+   
    }
+  
   
 
    if(end == false) {
+if(changeMode) {
+servo[0].write(data);
+Serial.println(data);
+delay(500);
+if((data < 30 && mode == 0) || (data > 50 && mode == 1)) {
+  for(int i = 1; i < servoCount;i++) servo[i].write(servoValues[3][i -1]);
+  delay(2000);
+   changeMode = false;
+}
+end = true;
+Serial.begin(9600);
+}
+
+
+else if (changeMode == false) {
 int cycle = 0;
+      
 
 for(int j = 0 ; j < servoMoves[data][0];j++) {
 for(int i = 1; i < servoCount;i++) {
 
   //Serial.println(servoValues[data][i -1]);
  servo[i].write(servoValues[(servoMoves[data][1])+cycle][i -1]);
- //if(cycle ==1 && i == 2) delay(500);
- //if(cycle == 0 && i == 3) delay(500);0
+ 
 
 }
 
@@ -95,20 +124,17 @@ cycle++;
 if(cycle > 1) cycle=0;
 
 if(j == (servoMoves[data][0] -1)) {
+  if(data == 0 || data == 1) {
+  changeMode = true;
+  mode = data;
+ }
    end = true;
   Serial.begin(9600);
 
 }
 delay(servoMoves[data][2]);
-
   }
-
-
+}
    }
-
-
-//x = map(x, min,max,10,170);
-//servo[0].write(x);
-
 }
 
