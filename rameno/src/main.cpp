@@ -48,7 +48,7 @@ unsigned int servoValues [13] [3] = {
 };
 
 int servoMoves [servoPose] [3] = {
-  {2,1,500}, //dolluu ke kulice
+//  {2,1,500}, //dolluu ke kulice
   {2,3,500}, //nahoru ke kulice
   {5,5,700}, //ne
   {5,7,1000}, //ano
@@ -63,9 +63,7 @@ int servoMoves [servoPose] [3] = {
 void move(int data) {
   int cycle = 0;
 for(int j = 0 ; j < servoMoves[data][0];j++) {
-for(int i = 1; i < servoCount;i++) {
- servo[i].write(servoValues[(servoMoves[data][1])+cycle][i -1]);
-}
+for(int i = 1; i < servoCount;i++) servo[i].write(servoValues[(servoMoves[data][1])+cycle][i -1]);
 cycle++;
 if(cycle > 1) cycle=0;
 if(j == (servoMoves[data][0] -1)) {
