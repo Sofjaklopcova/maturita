@@ -4,7 +4,7 @@ import keyboard as keyboard
 import mediapipe as mp
 import serial
 import time
-from timer import RepeatedTimer
+count = 0
 
 upCount = 0
 cap = cv2.VideoCapture(0)
@@ -18,35 +18,42 @@ com = "com7"  # nastaveni portu arduina
 change = False
 delay = 5
 mode = 1
+arduinoSerial = serial.Serial(com, 9600)
 
 
 # distance - min: 2 max: 320 (me)
 
 
 def arduinoWrite():
-    global change, mode
-    #arduinoSerial = serial.Serial(com, 9600)
+    global change, mode, arduinoSerial
     if change is False:
-        # arduinoSerial.write(bytes(str(upCount), 'UTF-8'))
+        arduinoSerial.write(bytes(str(upCount), 'UTF-8'))
         print(upCount)
         if upCount == 1 or upCount == 2:
             mode = upCount
-            print("zmena modu")
-            change = True
+           # print("zmena modu")
+          #  change = True
 
     else:
-        # arduinoSerial.write(bytes(str(distance), 'UTF-8'))
-        print(distance)
+        arduinoSerial.write(bytes(str(distance), 'UTF-8'))
+        #print(distance)
         if (distance < 30 and mode == 1) or (distance > 50 and mode == 2):
             print("zmena modu")
-            change = False
-    # arduinoSerial.close()
+          #  change = False
     return
 
+def lowbudgettimer():
+    global count
+    for i in range(1000000000):
+        if(i == 99999999):
+            count += 1
+            lowbudgettimer()
+        if(count == 3):
+            arduinoWrite()
+            count = 0
 
+lowbudgettimer()
 
-
-rt = RepeatedTimer(delay, arduinoWrite)
 while True:
     success, image = cap.read()
     imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -73,7 +80,7 @@ while True:
                 if upCount > 1:
                     distance = math.sqrt(pow(handList[8][0] - handList[4][0], 2) + pow(handList[8][1] - handList[4][1], 2))
 
-               # print("--------")
+                print("--------")
                 #print(handList[7])
                 #print(handList[3])
                 #print("---------")
@@ -87,4 +94,5 @@ while True:
     cv2.imshow("Output", image)
     cv2.waitKey(1)
     if keyboard.is_pressed("q") or keyboard.is_pressed("esc"):
+        arduinoSerial.close()
         break

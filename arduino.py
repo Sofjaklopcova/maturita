@@ -11,15 +11,12 @@ print("uvodni pozdrav")
 
 while 1:
     user_input = input()
-    if (user_input == '1'):
-        time.sleep(1)
-        ArduinoSerial.write(bytes('1', 'UTF-8'))
+
+    ArduinoSerial.write(bytes(str(user_input), 'UTF-8'))
 
 
 
-    if(user_input == '0'):
-        ArduinoSerial.write(bytes('0', 'UTF-8'))
-        time.sleep(1)
+
 
 
 # ArduinoSerial.close()

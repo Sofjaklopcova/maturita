@@ -1,8 +1,8 @@
 #include <Servo.h>
 #include <Arduino.h>
 
-const int min= -1;  //
-const int max = 10; //
+const int min= 2;  //
+const int max = 160; //
 
 bool end;
 int data = 0;
@@ -27,9 +27,7 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 
 // servo0 20
 
-
-
-unsigned int servoValues [13] [3] = {
+ int servoValues [13] [3] = {
    {20,50,20},  //puvodni stav 
    {170,80,45}, //dole sběr kuličky part1
    {123,113,45}, //dolu sběr kuličky part2
@@ -39,25 +37,19 @@ unsigned int servoValues [13] [3] = {
    {120,34,90},  //ne part2 
    {160,72,120},  // ano part1
    {105,65,120},  //ano part2
-   {50,50,120}, //tanecek part1
-   {80,80,130}, //tanecek part2
-   {150,80,150}, //uklona part1
-   {25,150,150}  //uklona part2
-
-
+   {168,20,30}, //tanecek part1
+   {143,121,30}, //tanecek part2
+   {158,50,136}, //uklona part1
+   {123,130,133},  //uklona part2
 };
 
 int servoMoves [servoPose] [3] = {
-//  {2,1,500}, //dolluu ke kulice
-  {2,3,500}, //nahoru ke kulice
-  {5,5,700}, //ne
-  {5,7,1000}, //ano
-  {5,9,750},  //tanecek
-  {2,11,1000} //uklona
-  
-  
-
-
+  {2,1,500}, //dolluu ke kulice 1
+  {2,3,500}, //nahoru ke kulice 2
+  {5,5,700}, //ne  3
+  {5,7,1000}, //ano  4 
+  {5,9,660},  //tanecek 5
+  {3,11,1000}, //uklona
 };
 
 void move(int data) {
@@ -84,7 +76,8 @@ void setup() {
   Serial.begin(9600);
   for(int i = 0; i < servoCount;i++) {
   servo[i].attach(servoPins[i]);
-  if(i > 0) servo[i].write(servoValues[0][i -1]);
+ // if(i > 0) servo[i].write(servoValues[0][i -1]);
+ //else servo[i].write(150);
 }
 end = true;
 changeMode = false;
@@ -94,12 +87,12 @@ void loop() {
  
    if(end == true) {
    // Serial.println("vstup povolen");
-           serialData= Serial.read();
- serialData = serialData - '0';
+        String read = Serial.readString();
+ serialData = read.toInt();
  //Serial.println(changeMode);
 
 
- if((serialData < servoPose +1 && serialData > 0 && changeMode == false) ||
+ if((serialData < servoPose && serialData > 0 && changeMode == false) ||
   (serialData < max && serialData > min && changeMode == true)) {
 Serial.println(serialData);
  if(changeMode == false) data = serialData -1;
@@ -116,12 +109,18 @@ servo[0].write(data);
 Serial.println(data);
 delay(500);
 if((data < 30 && mode == 0) || (data > 50 && mode == 1)) {
- //move(data + 5)
-  delay(2000);
+ if(mode == 1) move(5);
+ if(mode == 0) {
+  end = true;
+  Serial.begin(9600);
+ }
    changeMode = false;
 }
-end = true;
+else {
+  end = true;
 Serial.begin(9600);
+}
+
 }
 
 else if (changeMode == false) {
