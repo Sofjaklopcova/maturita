@@ -44,7 +44,7 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 };
 
 int servoMoves [servoPose] [3] = {
-  {2,1,500}, //dolluu ke kulice 1
+  {2,1,500}, //dolu ke kulice 1
   {2,3,500}, //nahoru ke kulice 2
   {5,5,700}, //ne  3
   {5,7,1000}, //ano  4 

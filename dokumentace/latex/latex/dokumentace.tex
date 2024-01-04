@@ -372,12 +372,22 @@ Hnedka v první kapitole nalezneté  veškeré potřenbé součástky k sestaven
 %* motivaci pro další čtení textu včetně stručného uvedení obsahu následujících kapitol 
 
 
-chapter{Gesta}
+\chapter{Princip fungování projektu}
+\begin{figure}[h]
+	Tady se nachází strukturovaný náčrt, jak funguje celý projekt.
+	A to tak že kamera snímá určité gesto. Kód obraz převádí na potřebné hodnoty které rozpozná rameno. Potom se pošlou do Arduina	a ono ve své řadě je dá na určité piny aby servo rozpoznala co mají dělat.
+	\centering
+	\includegraphics[width=0.9\linewidth]{image/princip.jpg} 
+	
+	
+	\caption{princip \cite{princip}.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:princip} %% označení až budeš chtít na obrázek odkazovat
+\end{figure}
 
 
 \chapter{Hardware}
 	\section{Netištěné součástky}
-
+Jelikož jsem to rameno nesestavovala tak nemam možnost popisovat postup, ale tady je výčet potřebných součástek 
 
 \begin{itemize}
 	\item	 3 - 955 nebo 946 servo
@@ -431,7 +441,7 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 	\centering
 	\includegraphics[width=0.4\linewidth]{image/arduino.jpg} 
 	
-	\caption{kleště\cite{servo-kleste}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{servo nacházejíci se v kleštich\cite{servo-kleste}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:servo-kleste} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -461,17 +471,6 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 \end{figure}
 
 \newpage
-\chapter{Princip fungování projektu}
-\begin{figure}[h]
-	Tady se nachází strukturovaný náčrt, jak funguje celý projekt.
-	A to tak že kamera snímá určité gesto. Kód obraz převádí na potřebné hodnoty které rozpozná rameno. Potom se pošlou do Arduina	a ono ve své řadě je dá na určité piny aby servo rozpoznala co mají dělat.
-	\centering
-	\includegraphics[width=0.6\linewidth]{image/princip.jpg} 
-	
-	
-	\caption{princip \cite{princip}.} %% popisek obrázku, nezapomeň na citace!
-	\label{fig:princip} %% označení až budeš chtít na obrázek odkazovat
-\end{figure}
 
 
 
@@ -487,19 +486,48 @@ OpenCV je multiplatformní svobodná  knihovna pro práci s obrazem.
  Samotná knihovna je z velké části napsána v C++, ale poskytuje Python wrapper, díky kterému ji můžeme používat i v Pythonu. 
  OpenCV se používá pro zpracování obrazu z kamer, rozpoznání psaného textu nebo obličejů..
 Tuto knihovnu jsem využila na celkové zpracování obrazu z kamery mého notebooku
-\\
+
+
+\begin{lstlisting}[style=Python, caption={obraz, a jeho převedení do správného formátu}]
+cap = cv2.VideoCapture(0)
+...
+image = cap.read()
+imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+results = hands.process(imageRGB)
+\end{lstlisting}
+
+Převede snímáný obraz do formátu RGB, který potřebujem po vykreslení pixelů ve správném pořadí.
 
 \subsubsection{knihovna mediapipe}
 
 Tahle knihovna se zaměřuje na detekci lidských části těla.
 Já vyuila pro svůj projekt pouze detekci dlaní
-\\
+Pro detekci potřebuje mít orientační body ruky. Model ručního orientačního bodu dokáže předpovědět 21 přesných souřadnic umístění každého orientačního bodu na ruce.
+
+\begin{figure}[h]
+	
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/orientacniBody.jpg} 
+	
+	
+	\caption{orientacni body dlaně \cite{orientacni body dlaně}.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:obvod} %% označení až budeš chtít na obrázek odkazovat
+\end{figure}
 
 \subsubsection{knihovna math}
 
 V spolupráci se zvyše zmíněnou knihovnou mi poskytla souřadnice jednotlivých kloubu, pro přesné zachycení ruky. 
 Další výpočty provedla také při zachycení vzdálenosti prstů potřebné k rozhýbání kleštiček
 
+\begin{figure}[h]
+	
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/prikladGesta.PNG} 
+	
+	
+	\caption{použití úhlu v gestech \cite{uhly v gestech}.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
+\end{figure}
 
 \newpage
 
@@ -540,8 +568,8 @@ Na zčátek samozřejmě je potřeba inicializovat veškere potřebné hodnoty.
 např:
 
 \begin{lstlisting}[style=Python, caption={Potřebné hodnoty}]
-const int min= 2;  //
-const int max = 160; //
+const int min= 2;  // minimalní hodnota pro pozici ramene
+const int max = 160; // maximalní hodnota pro pozici ramene
 
 bool end;
 int data = 0;

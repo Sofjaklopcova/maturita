@@ -1,9 +1,11 @@
 \babel@toc {czech}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Arduino nano 328 \cite {Arduino}.}}{6}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces kleště\cite {servo-kleste}.}}{7}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Serva\cite {serva}.}}{7}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces zapojení obvodu \cite {obvod}.}}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces princip \cite {princip}.}}{5}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces princip \cite {princip}.}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arduino nano 328 \cite {Arduino}.}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces servo nacházejíci se v kleštich\cite {servo-kleste}.}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Serva\cite {serva}.}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces zapojení obvodu \cite {obvod}.}}{10}{figure.caption.9}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces orientacni body dlaně \cite {orientacni body dlaně}.}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces použití úhlu v gestech \cite {uhly v gestech}.}}{12}{figure.caption.11}%

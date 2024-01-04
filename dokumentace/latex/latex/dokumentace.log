@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  4 JAN 2024 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  5 JAN 2024 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,6 +633,12 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 (dokumentace.aux
 
+LaTeX Warning: Label `fig:obvod' multiply defined.
+
+
+LaTeX Warning: Label `fig:obvod' multiply defined.
+
+
 LaTeX Warning: Label `wikibooksLaTeX' multiply defined.
 
 
@@ -844,196 +850,229 @@ Overfull \hbox (2.54396pt too wide) in paragraph at lines 304--309
 
 ]
 Kapitola 1.
+<image/princip.jpg, id=102, 1927.2pt x 1204.5pt>
+File: image/princip.jpg Graphic file (type jpg)
+<use image/princip.jpg>
+Package pdftex.def Info: image/princip.jpg  used on input line 380.
+(pdftex.def)             Requested size: 396.91325pt x 248.0636pt.
+
+LaTeX Warning: Citation `princip' on page 5 undefined on input line 383.
+
+
+LaTeX Warning: Citation `princip' on page 5 undefined on input line 383.
+
+[5 <./image/princip.jpg>] [6
+
+]
+Kapitola 2.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-83.
+93.
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[5]
-<image/arduino.jpg, id=107, 1027.84pt x 1027.84pt>
+[7]
+<image/arduino.jpg, id=117, 1027.84pt x 1027.84pt>
 File: image/arduino.jpg Graphic file (type jpg)
 <use image/arduino.jpg>
-Package pdftex.def Info: image/arduino.jpg  used on input line 415.
+Package pdftex.def Info: image/arduino.jpg  used on input line 425.
 (pdftex.def)             Requested size: 264.61333pt x 264.61295pt.
 
 
-LaTeX Warning: Citation `Arduino' on page 6 undefined on input line 417.
+LaTeX Warning: Citation `Arduino' on page 8 undefined on input line 427.
 
 
-LaTeX Warning: Citation `Arduino' on page 6 undefined on input line 417.
+LaTeX Warning: Citation `Arduino' on page 8 undefined on input line 427.
 
-[6 <./image/arduino.jpg>]
+[8 <./image/arduino.jpg>]
 File: image/arduino.jpg Graphic file (type jpg)
 <use image/arduino.jpg>
-Package pdftex.def Info: image/arduino.jpg  used on input line 432.
+Package pdftex.def Info: image/arduino.jpg  used on input line 442.
 (pdftex.def)             Requested size: 176.40439pt x 176.39294pt.
 
 
-LaTeX Warning: Citation `servo-kleste' on page 7 undefined on input line 434.
+LaTeX Warning: Citation `servo-kleste' on page 9 undefined on input line 444.
 
 
-LaTeX Warning: Citation `servo-kleste' on page 7 undefined on input line 434.
+LaTeX Warning: Citation `servo-kleste' on page 9 undefined on input line 444.
 
 File: image/arduino.jpg Graphic file (type jpg)
 <use image/arduino.jpg>
-Package pdftex.def Info: image/arduino.jpg  used on input line 443.
+Package pdftex.def Info: image/arduino.jpg  used on input line 453.
 (pdftex.def)             Requested size: 132.30666pt x 132.30647pt.
 
-LaTeX Warning: Citation `serva' on page 7 undefined on input line 445.
+LaTeX Warning: Citation `serva' on page 9 undefined on input line 455.
 
 
-LaTeX Warning: Citation `serva' on page 7 undefined on input line 445.
+LaTeX Warning: Citation `serva' on page 9 undefined on input line 455.
 
-[7]
+[9]
 File: image/arduino.jpg Graphic file (type jpg)
 <use image/arduino.jpg>
-Package pdftex.def Info: image/arduino.jpg  used on input line 456.
+Package pdftex.def Info: image/arduino.jpg  used on input line 466.
 (pdftex.def)             Requested size: 396.91325pt x 396.91942pt.
 
 
-LaTeX Warning: Citation `obvod' on page 8 undefined on input line 459.
+LaTeX Warning: Citation `obvod' on page 10 undefined on input line 469.
 
 
-LaTeX Warning: Citation `obvod' on page 8 undefined on input line 459.
+LaTeX Warning: Citation `obvod' on page 10 undefined on input line 469.
 
-[8]
-Kapitola 2.
-<image/princip.jpg, id=128, 1927.2pt x 1204.5pt>
-File: image/princip.jpg Graphic file (type jpg)
-<use image/princip.jpg>
-Package pdftex.def Info: image/princip.jpg  used on input line 469.
-(pdftex.def)             Requested size: 264.61333pt x 165.37573pt.
-
-LaTeX Warning: Citation `princip' on page 9 undefined on input line 472.
-
-
-LaTeX Warning: Citation `princip' on page 9 undefined on input line 472.
-
-[9
-
- <./image/princip.jpg>] [10
-
-]
+[10]
 Kapitola 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 487--491
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 494--497
-
- []
-
-[11]
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 511.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-11.
+nput line 491.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
+91.
 
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [12]
-[13] [14
+)
+<image/orientacniBody.jpg, id=138, 1204.5pt x 558.085pt>
+File: image/orientacniBody.jpg Graphic file (type jpg)
+<use image/orientacniBody.jpg>
+Package pdftex.def Info: image/orientacniBody.jpg  used on input line 510.
+(pdftex.def)             Requested size: 352.81552pt x 163.467pt.
 
-] [15] [16
+
+LaTeX Warning: Citation `orientacni body dlanÄ›' on page 11 undefined on input 
+line 513.
+
+
+LaTeX Warning: Citation `orientacni body dlanÄ›' on page 11 undefined on input 
+line 513.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 6316) has occurred while \output is active []
+
+ [11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+<image/prikladGesta.PNG, id=150, 575.14874pt x 331.99031pt>
+File: image/prikladGesta.PNG Graphic file (type png)
+<use image/prikladGesta.PNG>
+Package pdftex.def Info: image/prikladGesta.PNG  used on input line 525.
+(pdftex.def)             Requested size: 352.81552pt x 203.65865pt.
+
+
+LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 528
+.
+
+
+LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 528
+.
+
+[12 <./image/orientacniBody.jpg> <./image/prikladGesta.PNG>] [13] [14] [15
+
+]
+[16
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 []\T1/phv/m/n/12 Základní in-for-mace o ges-tech [On-line]. 2023 CEMI MBA Stu-d
 ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 \T1/phv/m/n/12 s.r.o. [cit. 2020-08-24]. Do-stupné z: []$\T1/cmtt/m/n/12 https 
 : / / www . cemi . cz / blog /
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 5
-84.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
+12.
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-Underfull \hbox (badness 1371) in paragraph at lines 584--586
+Underfull \hbox (badness 1371) in paragraph at lines 612--614
 []\T1/phv/m/n/12 knihovna math v py-thonu Co-py-right \TS1/phv/m/n/12 © \T1/phv
 /m/n/12 2023 it-ne-twork.cz. []$\T1/cmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 590--592
+Underfull \hbox (badness 2050) in paragraph at lines 618--620
 []\T1/phv/m/n/12 komunikace s ar-dui-nem 2 Co-py-right \TS1/phv/m/n/12 © \T1/ph
 v/m/n/12 2023 Ci-r-cuit Di-gest. All rights
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 590--592
+Underfull \hbox (badness 10000) in paragraph at lines 618--620
 \T1/phv/m/n/12 re-ser-ved. []$\T1/cmtt/m/n/12 https : / / circuitdigest . com /
  microcontroller-[]projects /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--594
+Underfull \hbox (badness 10000) in paragraph at lines 620--622
 []\T1/phv/m/n/12 zkou²ka funk£-nosti []$\T1/cmtt/m/n/12 https : / / docs . ardu
 ino . cc / learn / electronics /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--596
+Underfull \hbox (badness 10000) in paragraph at lines 622--624
 []\T1/phv/m/n/12 zkou²ka funk£-nosti []$\T1/cmtt/m/n/12 https : / / problemsolv
 ingwithpython . com /
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 602.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 630.
 [17
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.609 	\end{thebibliography}
+l.637 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.609 	\end{thebibliography}
+l.637 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.609 	\end{thebibliography}
+l.637 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.609 	\end{thebibliography}
+l.637 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.609 	\end{thebibliography}
+l.637 	\end{thebibliography}
                             ] (dokumentace.lof
 
-LaTeX Warning: Citation `Arduino' on page 18 undefined on input line 3.
+LaTeX Warning: Citation `princip' on page 18 undefined on input line 3.
 
 
-LaTeX Warning: Citation `servo-kleste' on page 18 undefined on input line 4.
+LaTeX Warning: Citation `Arduino' on page 18 undefined on input line 5.
 
 
-LaTeX Warning: Citation `serva' on page 18 undefined on input line 5.
+LaTeX Warning: Citation `servo-kleste' on page 18 undefined on input line 6.
 
 
-LaTeX Warning: Citation `obvod' on page 18 undefined on input line 6.
+LaTeX Warning: Citation `serva' on page 18 undefined on input line 7.
 
 
-LaTeX Warning: Citation `princip' on page 18 undefined on input line 8.
+LaTeX Warning: Citation `obvod' on page 18 undefined on input line 8.
+
+
+LaTeX Warning: Citation `orientacni body dlanÄ›' on page 18 undefined on input 
+line 10.
+
+
+LaTeX Warning: Citation `orientacni body dlanÄ›' on page 18 undefined on input 
+line 11.
 
 )
 \tf@lof=\write5
@@ -1052,20 +1091,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `dokumentace.out' has not changed.
-(rerunfilecheck)             Checksum: 4FD0DD7E5EBEA5DC3439437DC5698C1A;1231.
+(rerunfilecheck)             Checksum: 529C9DE4D2B267F2F21EA63D5B503827;1231.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 236 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18205 strings out of 475247
- 291603 string characters out of 5758735
+ 18260 strings out of 475247
+ 292542 string characters out of 5758735
  1940785 words of memory out of 5000000
- 39315 multiletter control sequences out of 15000+600000
+ 39362 multiletter control sequences out of 15000+600000
  624992 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,97p,510b,1628s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,97p,510b,1616s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\OEM\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ectt1200.pk><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 /helvetic/uhvb8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/ur
@@ -1073,9 +1112,9 @@ w/helvetic/uhvr8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/helvetic/uhvro8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1
 /urw/times/utmb8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmr8a.pfb>
-Output written on dokumentace.pdf (23 pages, 1594310 bytes).
+Output written on dokumentace.pdf (23 pages, 2187939 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
