@@ -40,7 +40,7 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
    {168,20,30}, //tanecek part1
    {143,121,30}, //tanecek part2
    {158,50,136}, //uklona part1
-   {123,130,133},  //uklona part2
+   {123,130,133},  //uklona part2v
 };
 
 int servoMoves [servoPose] [3] = {

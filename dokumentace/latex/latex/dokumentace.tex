@@ -567,14 +567,13 @@ Takže se jdeme přesunout k popisu.
 Na zčátek samozřejmě je potřeba inicializovat veškere potřebné hodnoty.
 např:
 
-\begin{lstlisting}[style=Python, caption={Potřebné hodnoty}]
+\begin{lstlisting}[style=Python, caption={Inicializace potřebných hodnot}]
 const int min= 2;  // minimalní hodnota pro pozici ramene
 const int max = 160; // maximalní hodnota pro pozici ramene
 
 bool end;
 int data = 0;
 int serialData =0;
-
 bool changeMode;
 int mode;
 const int servoPose = 6; //kolik stavu má rameno
@@ -584,6 +583,10 @@ Servo servo[4]; // pole pro serva
 const byte servoPins [] = {2,3,4,5}; //piny pro serva
 \end{lstlisting}
 
+
+Jak jsem již zmiňovala výše zádrhel byl, když se do ramene posílali krajní hodnoty(0 a 180). Kvůli tomu jsem je nastavila na 2 a 160. a to je uložene v proměnných min a max.
+V proměnné servoPos jse uložen počet všech stavu ve kterých se moje rameno může ncházet.
+Jelikož obsahuje 4 serva, tak jsem pro ně vytvořila pole. A každé potřebuje svůj pin k tomu je pole servoPins.
 
 
 
