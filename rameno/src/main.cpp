@@ -29,18 +29,18 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 
  int servoValues [13] [3] = {
    {20,50,20},  //puvodni stav 
-   {170,80,45}, //dole sběr kuličky part1
-   {123,113,45}, //dolu sběr kuličky part2
-   {170,80,45},  //vhozeni kuličky nahorů part1
-   {170,80,86}, // vhozeni kuličky nahorů part2
-   {120,34,15}, //ne part1 
-   {120,34,90},  //ne part2 
-   {160,72,120},  // ano part1
-   {105,65,120},  //ano part2
-   {168,20,30}, //tanecek part1
-   {143,121,30}, //tanecek part2
-   {158,50,136}, //uklona part1
-   {123,130,133},  //uklona part2v
+   {170,80,45}, //dole sběr kuličky cast1
+   {123,113,45}, //dolu sběr kuličky cast2
+   {170,80,45},  //vhozeni kuličky nahorů cast1
+   {170,80,86}, // vhozeni kuličky nahorů cast2
+   {120,34,15}, //ne cast1
+   {120,34,90},  //ne cast2
+   {160,72,120},  // ano cast1
+   {105,65,120},  //ano cast2
+   {168,20,30}, //tanecek cast1
+   {143,121,30}, //tanecek cast2
+   {158,50,136}, //uklona cast1
+   {123,130,133},  //uklona cast2
 };
 
 int servoMoves [servoPose] [3] = {

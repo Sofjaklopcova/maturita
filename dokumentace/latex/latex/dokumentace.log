@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  7 JAN 2024 20:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  8 JAN 2024 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -967,41 +967,53 @@ LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 528
 LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 528
 .
 
-File: image/prikladGesta.PNG Graphic file (type png)
-<use image/prikladGesta.PNG>
-Package pdftex.def Info: image/prikladGesta.PNG  used on input line 534.
-(pdftex.def)             Requested size: 56.9055pt x 32.84636pt.
-
-LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 536
-.
-
-
-LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 536
-.
-
 <image/vzdalenost.PNG, id=151, 117.43875pt x 191.9672pt>
 File: image/vzdalenost.PNG Graphic file (type png)
 <use image/vzdalenost.PNG>
-Package pdftex.def Info: image/vzdalenost.PNG  used on input line 538.
-(pdftex.def)             Requested size: 56.9055pt x 93.01903pt.
-[12 <./image/orientacniBody.jpg> <./image/prikladGesta.PNG>]
-Underfull \vbox (badness 5203) has occurred while \output is active []
+Package pdftex.def Info: image/vzdalenost.PNG  used on input line 534.
+(pdftex.def)             Requested size: 88.2022pt x 144.17714pt.
 
- [13 <./image/vzdalenost.PNG>] [14]
-<image/mody.jpg, id=190, 1927.2pt x 1204.5pt>
+LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 537
+.
+
+
+LaTeX Warning: Citation `uhly v gestech' on page 12 undefined on input line 537
+.
+
+[12 <./image/orientacniBody.jpg> <./image/prikladGesta.PNG> <./image/vzdalenost
+.PNG>] [13]
+<image/mody.jpg, id=185, 1927.2pt x 1204.5pt>
 File: image/mody.jpg Graphic file (type jpg)
 <use image/mody.jpg>
 Package pdftex.def Info: image/mody.jpg  used on input line 604.
 (pdftex.def)             Requested size: 132.30666pt x 82.68787pt.
 
 
-LaTeX Warning: Citation `mÃ³dy ramene' on page 15 undefined on input line 607.
+LaTeX Warning: Citation `mÃ³dy ramene' on page 14 undefined on input line 607.
 
 
-LaTeX Warning: Citation `mÃ³dy ramene' on page 15 undefined on input line 607.
+LaTeX Warning: Citation `mÃ³dy ramene' on page 14 undefined on input line 607.
 
-[15 <./image/mody.jpg>] [16]
-Overfull \hbox (7.5861pt too wide) in paragraph at lines 635--636
+[14 <./image/mody.jpg>]
+Overfull \hbox (71.38214pt too wide) in paragraph at lines 632--633
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.64722pt too wide) in paragraph at lines 648--649
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[15]
+Overfull \hbox (28.1677pt too wide) in paragraph at lines 663--664
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (7.5861pt too wide) in paragraph at lines 701--702
 \T1/phv/m/n/12 Cílem sa-motné práce bylo roz-po-hy-bo-vat ra-meno a ud¥-lat si 
 jasno jak fun-gují knihovny.
  []
@@ -1011,83 +1023,83 @@ jasno jak fun-gují knihovny.
 ] [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 642--643
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 []\T1/phv/m/n/12 Základní in-for-mace o ges-tech [On-line]. 2023 CEMI MBA Stu-d
 ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--643
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 \T1/phv/m/n/12 s.r.o. [cit. 2020-08-24]. Do-stupné z: []$\T1/cmtt/m/n/12 https 
 : / / www . cemi . cz / blog /
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
-48.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
+14.
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-Underfull \hbox (badness 1371) in paragraph at lines 648--650
+Underfull \hbox (badness 1371) in paragraph at lines 714--716
 []\T1/phv/m/n/12 knihovna math v py-thonu Co-py-right \TS1/phv/m/n/12 © \T1/phv
 /m/n/12 2023 it-ne-twork.cz. []$\T1/cmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 654--656
+Underfull \hbox (badness 2050) in paragraph at lines 720--722
 []\T1/phv/m/n/12 komunikace s ar-dui-nem 2 Co-py-right \TS1/phv/m/n/12 © \T1/ph
 v/m/n/12 2023 Ci-r-cuit Di-gest. All rights
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 654--656
+Underfull \hbox (badness 10000) in paragraph at lines 720--722
 \T1/phv/m/n/12 re-ser-ved. []$\T1/cmtt/m/n/12 https : / / circuitdigest . com /
  microcontroller-[]projects /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 656--658
+Underfull \hbox (badness 10000) in paragraph at lines 722--724
 []\T1/phv/m/n/12 zkou²ka funk£-nosti []$\T1/cmtt/m/n/12 https : / / docs . ardu
 ino . cc / learn / electronics /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--660
+Underfull \hbox (badness 10000) in paragraph at lines 724--726
 []\T1/phv/m/n/12 zkou²ka funk£-nosti []$\T1/cmtt/m/n/12 https : / / problemsolv
 ingwithpython . com /
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 666.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 732.
 [19
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.673 	\end{thebibliography}
+l.739 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.673 	\end{thebibliography}
+l.739 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.673 	\end{thebibliography}
+l.739 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.673 	\end{thebibliography}
+l.739 	\end{thebibliography}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{cite.wikibook
 sLaTeX}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.673 	\end{thebibliography}
+l.739 	\end{thebibliography}
                             ] (dokumentace.lof
 
 LaTeX Warning: Citation `princip' on page 20 undefined on input line 3.
@@ -1117,7 +1129,7 @@ LaTeX Warning: Citation `uhly v gestech' on page 20 undefined on input line 12.
 
 
 
-LaTeX Warning: Citation `mÃ³dy ramene' on page 20 undefined on input line 14.
+LaTeX Warning: Citation `mÃ³dy ramene' on page 20 undefined on input line 13.
 
 )
 \tf@lof=\write5
@@ -1143,10 +1155,10 @@ Package rerunfilecheck Info: File `dokumentace.out' has not changed.
 ### simple group (level 1) entered at line 236 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18296 strings out of 475247
- 293187 string characters out of 5758735
- 1942785 words of memory out of 5000000
- 39389 multiletter control sequences out of 15000+600000
+ 18411 strings out of 475247
+ 294458 string characters out of 5758735
+ 1953785 words of memory out of 5000000
+ 39462 multiletter control sequences out of 15000+600000
  624992 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,11n,97p,795b,1616s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1157,9 +1169,9 @@ w/helvetic/uhvr8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/helvetic/uhvro8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1
 /urw/times/utmb8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmr8a.pfb>
-Output written on dokumentace.pdf (25 pages, 2316508 bytes).
+Output written on dokumentace.pdf (25 pages, 2327799 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 105 named destinations out of 1000 (max. 500000)
+ 453 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

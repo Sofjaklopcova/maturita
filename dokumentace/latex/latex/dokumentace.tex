@@ -528,17 +528,17 @@ Další výpočty provedla také při zachycení vzdálenosti prstů potřebné 
 	\caption{použití úhlu v gestech \cite{uhly v gestech}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
-
-\begin{figure}
+\begin{figure}[h]
+	
 	\centering
-\subfloat{\includegraphics[width=2cm]{image/prikladGesta.PNG}}
-
-		\caption{použití úhlu v gestech \cite{uhly v gestech}.}
-	\qquad
-	\subfloat{\includegraphics[width=2cm]{image/vzdalenost.PNG}}
-	\caption{ukázka vzdálenosti}
-	\label{fig:vzdalenost}
+	\includegraphics[width=0.2\linewidth]{image/vzdalenost.PNG} 
+	
+	
+	\caption{použití úhlu v gestech \cite{uhly v gestech}.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:vzdalenost} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
+
+
 
 \newpage
 
@@ -622,11 +622,77 @@ if(j == (servoMoves[data][0] -1)) {
 	}
 \end{lstlisting}
 
-	\begin{itemize}
+\begin{itemize}
 		\item Tahle jednoduchá podmínka je vytvořena pro kontrolu, kde se zroná nachází rameno. A když se nachází nahoře nebo dole, tak se přepné mód pro měření vzdálenosti. Ať se může chytnout nebo pustit kulička.
 
 	
 \end{itemize}
+	
+\begin{lstlisting}[style=Python, caption={dvourozměrné pole na potřebné hodnoty}]
+	\begin{lstlisting}[style=Python, caption={dvourozměrné pole na potřebné hodnoty}]
+	 int servoValues [13] [3] = {
+		{20,50,20},  //puvodni stav 
+		{170,80,45}, //dole sběr kuličky cast1
+		{123,113,45}, //dolu sběr kuličky cast2
+		...
+		{123,130,133},  //uklona cast2
+	};
+		\end{lstlisting}
+		
+\begin{itemize}
+	\item Dále máme dvourozměrné pole pro hodnoty pro serva. jsou vždy v jednom řádku jen tři, protože pro ovádání serva v kleštích jsou potřeba jiné hodnoty.
+			
+	\end{itemize}
+	
+\begin{lstlisting}[style=Python, caption={další pole pro }]
+	\begin{lstlisting}[style=Python, caption={podmínka pro přepínání módu}]
+	int servoMoves [servoPose] [3] = {
+		{2,1,500}, //dolu ke kulice 1
+		{2,3,500}, //nahoru ke kulice 2
+		{5,5,700}, //ne  3
+	...
+	};	
+	\end{lstlisting}
+	
+	\begin{itemize}
+		\item Další pole se skládá z několika různých hodnot. A to na prvním místě počet opakování pohybů, na druhém místě se nachází pořadí hodnot serv z předešlého pole.Poslední hodnota je pro delay.
+		
+	\end{itemize}
+
+\begin{lstlisting}[style=Python, caption={funkce na rozpohybocání ramene}]
+	\begin{lstlisting}[style=Python, caption={funkce na rozpohybocání ramene}]
+	
+	void move(int data) {
+		int cycle = 0;
+		for(int j = 0 ; j < servoMoves[data][0];j++) {
+			for(int i = 1; i < servoCount;i++) servo[i].write(servoValues[
+											(servoMoves[data][1])+cycle][i -1]);
+			cycle++;
+			if(cycle > 1) cycle=0;
+			if(j == (servoMoves[data][0] -1)) {
+				if(data == 0 || data == 1) {
+					changeMode = true;
+					mode = data;
+				}
+				end = true;
+				Serial.begin(9600);
+			}
+			delay(servoMoves[data][2]);
+		}
+	}
+	
+	\end{lstlisting}
+	
+	\begin{itemize}
+		\item Jedna z nejpodstatnějších funkcí. Je pro rozpohybování ramene.
+		Jakmile se načte jedna hodnota, funkce se posune v cyklu o jedno políčko dál v servoValues, a tak než dojde na konec. Potom se zkontroluje zda data jsou 0 nebo 1 pro pochopení že se rameno nacházi v pozici u  kuličky. Tehdy se změní changeMode a přepne se na měření vzdálenosti mezi prsty.
+		
+	\end{itemize}
+	
+	
+	
+	
+	
 	
 	
 	\chapter*{Závěr}
