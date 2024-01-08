@@ -54,7 +54,7 @@ while True:
     imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     results = hands.process(imageRGB)
     multiLandMarks = results.multi_hand_landmarks
-    # checking whether a hand is detected
+
 
     if results.multi_hand_landmarks:
         handList = []
@@ -91,3 +91,12 @@ while True:
     if keyboard.is_pressed("q") or keyboard.is_pressed("esc"):
         arduinoSerial.close()
         break
+
+
+
+
+
+
+
+
+

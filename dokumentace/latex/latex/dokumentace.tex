@@ -359,11 +359,11 @@ openright
 
 Tahle dokumentace vysvětluje celkovou funčnost mého projektu. Již hned jakmile jsme byli seznámení s tim, že čtvrtý ročník musíme zakončit ročnikovým projektem. Byla jsem rozhodlá pro Hardware. Po dlouhém a náročném pátrání a s dopomocí pana Godovského, bylo zvoleno robotické rameno. Bohužel samotné ovládání mě zavedlo primárně do Softwaru.
 
-Rameno je ovládáné předvolenými gesty snímanými z kamery notebooku. Byl také nápad kompletně ovládat rameno způsobem, že rameno kopíruje pohyb ruky. Ale k tomu bylo potřeba dokoupit Pohyblivý senzor Kinect pro Xbox. To je ale celkoem finančně náročné, tudíž od toho jsem odstoupila.	
+Rameno je ovládáné předvolenými gesty snímanými z kamery notebooku. Byl také nápad kompletně ovládat rameno způsobem, že rameno kopíruje pohyb ruky. Ale k tomu bylo potřeba dokoupit Pohyblivý senzor Kinect pro Xbox. To je ale celkem finančně náročné, tudíž od toho jsem odstoupila.	
 
-Cílem projektu bylo zprovoznit pohyb ramene celkem jednoduchým ale také efektivním zpusobem. Diky tomu jsem si skvěle procvičila Python a C++. Motivoval mě ten pocit že to rameno rozhýbu. 
+Cílem projektu bylo zprovoznit pohyb ramene celkem jednoduchým ale také efektivním způsobem. Diky tomu jsem si skvěle procvičila Python a C++. Motivoval mě ten pocit že to rameno rozpohýbuji. 
 
-Hnedka v první kapitole nalezneté  veškeré potřenbé součástky k sestavené samotného ramene. To jsem ale nesestavovala já tudíž se buduvěnovat spíš softwaru. Je to doprovázené krátkou teorii o využitých technologiich. Nakonec také samozřejmě nebudou chybět odkazy ne všechny využité zdroje. 
+Hnedka v první kapitole nalezneté  všechny potřenbé součástky k sestavení samotného ramene. To jsem ale nesestavovala já tudíž se budu věnovat spíš softwaru. Je to doprovázené krátkou teorii o využitých technologiich. Nakonec také samozřejmě nebudou chybět odkazy ne všechny využité zdroje. 
 %Tipy k psaní úvodu
 %Je povinný, nadpis neměňte, rozsah - max. 1 strana. 
 %Tato část práce obsahuje: 
@@ -375,12 +375,12 @@ Hnedka v první kapitole nalezneté  veškeré potřenbé součástky k sestaven
 \chapter{Princip fungování projektu}
 \begin{figure}[h]
 	Tady se nachází strukturovaný náčrt, jak funguje celý projekt.
-	A to tak že kamera snímá určité gesto. Kód obraz převádí na potřebné hodnoty které rozpozná rameno. Potom se pošlou do Arduina	a ono ve své řadě je dá na určité piny aby servo rozpoznala co mají dělat.
+	A to tak že kamera snímá určité gesto. Kód s využitím knihoven obraz převádí na potřebné hodnoty které rozpozná rameno. Potom se pošlou do Arduina	a ono ve své řadě je dá na určité piny aby serva rozpoznala co mají dělat.
 	\centering
 	\includegraphics[width=0.9\linewidth]{image/princip.jpg} 
 	
 	
-	\caption{princip \cite{princip}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{princip fungování projektu \cite{princip}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:princip} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -416,7 +416,7 @@ Návod na samotné sestavení ramene naleznete na \href{https://www.instructable
 \subsection{Arduino nano 328}
 \subsubsection{popis}
 
-Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v další kapitole nahrajeme pomocí USB kabelu do něj a diky správnému zapojení vše skvěle funguje.
+Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v další kapitole nahrajeme pomocí USB kabelu do něj a diky správnému zapojení ramene vše skvěle funguje.
 
 
 	\begin{figure}[h]
@@ -432,8 +432,8 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 
 \subsection{Servo }
 \subsubsection{popis}
-	Tohle rameno obsahuje tři velke Serva a jedno malé.Každý
-	má také tři výstupy, a to: kabel určený na nějaký port, mínus a plus. 
+	Tohle rameno obsahuje tři velké Serva a jedno malé.Každý
+	z nich má také tři výstupy, a to: kabel určený na nějaký port, mínus a plus. 
 	\\
 	To nejmenší se nacházi v kleštičkách 
 \begin{figure}[h]
@@ -441,7 +441,7 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 	\centering
 	\includegraphics[width=0.4\linewidth]{image/arduino.jpg} 
 	
-	\caption{servo nacházejíci se v kleštich\cite{servo-kleste}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{servo nacházejíci se v kleštich ramene\cite{servo-kleste}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:servo-kleste} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -452,13 +452,13 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 	\centering
 	\includegraphics[width=0.3\linewidth]{image/arduino.jpg} 
 	
-	\caption{Serva\cite{serva}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Serva v těle ramene\cite{serva}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:serva} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
 \newpage
 
-\subsection{obvod}
+\subsection{Obvod}
 
 \begin{figure}[h]
 	
@@ -466,7 +466,7 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 	\includegraphics[width=0.9\linewidth]{image/arduino.jpg} 
 	
 	
-	\caption{zapojení obvodu \cite{obvod}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{zapojení ramene  \cite{obvod}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:obvod} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -480,8 +480,8 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 \section{Získání gest}
 Začneme importem knihoven, a to \textbf{OpenCV}  \textbf{math} a \textbf{mediapipe 0.10.8}  
 
-\subsubsection{knihovna OpenCV}
-OpenCV je multiplatformní svobodná  knihovna pro práci s obrazem.
+\subsubsection{Knihovna OpenCV}
+OpenCV je multiplatformní svobodná knihovna pro práci s obrazem.
 
  Samotná knihovna je z velké části napsána v C++, ale poskytuje Python wrapper, díky kterému ji můžeme používat i v Pythonu. 
  OpenCV se používá pro zpracování obrazu z kamer, rozpoznání psaného textu nebo obličejů..
@@ -496,12 +496,12 @@ imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 results = hands.process(imageRGB)
 \end{lstlisting}
 
-Převede snímáný obraz do formátu RGB, který potřebujem po vykreslení pixelů ve správném pořadí.
+Převede snímáný obraz do formátu RGB, který potřebujem pro vykreslení pixelů ve správném pořadí.
 
 \subsubsection{knihovna mediapipe}
 
 Tahle knihovna se zaměřuje na detekci lidských části těla.
-Já vyuila pro svůj projekt pouze detekci dlaní
+Já využila pro svůj projekt pouze detekci dlaní.
 Pro detekci potřebuje mít orientační body ruky. Model ručního orientačního bodu dokáže předpovědět 21 přesných souřadnic umístění každého orientačního bodu na ruce.
 
 \begin{figure}[h]
@@ -514,27 +514,37 @@ Pro detekci potřebuje mít orientační body ruky. Model ručního orientační
 	\label{fig:obvod} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
-\subsubsection{knihovna math}
+\subsubsection{Knihovna math}
 
-V spolupráci se zvyše zmíněnou knihovnou mi poskytla souřadnice jednotlivých kloubu, pro přesné zachycení ruky. 
+Ve spolupráci se zvyše zmíněnou knihovnou mi poskytla souřadnice jednotlivých kloubu, pro přesné zachycení ruky. 
 Další výpočty provedla také při zachycení vzdálenosti prstů potřebné k rozhýbání kleštiček
 
 \begin{figure}[h]
 	
 	\centering
-	\includegraphics[width=0.8\linewidth]{image/prikladGesta.PNG} 
+	\includegraphics[width=0.4\linewidth]{image/prikladGesta.PNG} 
 	
 	
 	\caption{použití úhlu v gestech \cite{uhly v gestech}.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
-\newpage
+\begin{figure}
+	\centering
+\subfloat{\includegraphics[width=2cm]{image/prikladGesta.PNG}}
 
+		\caption{použití úhlu v gestech \cite{uhly v gestech}.}
+	\qquad
+	\subfloat{\includegraphics[width=2cm]{image/vzdalenost.PNG}}
+	\caption{ukázka vzdálenosti}
+	\label{fig:vzdalenost}
+\end{figure}
+
+\newpage
 
 \section{Ověření funkčnostní ramene}
 Než jsem mohla začit se sprovozněním ramene dle myšlenky, jsem musela ověřit jejích funkčnost a taky zjistit jak se vlastně jednotlivá část hýbe.
-Proto jsem použila jendonuhý kód. Připojením pokaždé jednoho drátku do desky s arduinem jsem se postupně dozvěděla zaprve jaký drátek zodpovídá za co a také i jak se hybou. Byl tam jeden zadrhel a to to že serva stávkoali když jsem posílala i ty krajní hodnoty(0,180) po úpravě intervalu ve funkci se všechno srovnalo.
+Proto jsem použila jednoduhý kód. Připojením pokaždé jednoho drátku do desky s arduinem jsem se postupně dozvěděla zaprve jaký drátek zodpovídá za co a také i jak se hybou. Byl tam jeden zadrhel a to to že serva stávkovaly, když jsem posílala ty krajní hodnoty(0,180) po úpravě intervalu ve funkci, se všechno srovnalo.
 
 \begin{lstlisting}[style=Python, caption={Ukázka kódu k ověření funkčnosti}]
 #include <Servo.h>
@@ -547,11 +557,11 @@ void setup() {
 }
 
 void loop() {
-	for (pos = 0; pos <= 180; pos += 1) { 
+	for (pos = 2; pos <= 160; pos += 1) { 
 		myservo.write(pos);             
 		delay(15);                      
 	}
-	for (pos = 180; pos >= 0; pos -= 1) {
+	for (pos = 160; pos >= 2; pos -= 1) {
 		myservo.write(pos);            
 		delay(15);                       
 	}
@@ -564,7 +574,7 @@ void loop() {
 
 První věc, kterou musíme vzít v úvahu, je, že nezbytně potřebujeme mít na svém počítači program Python a také PySerial. Většinu kódu v Pythonu se dá sehnat na internetu a odkazy na ty stránky nalezenete níže v použité literatuře. 
 Takže se jdeme přesunout k popisu.
-Na zčátek samozřejmě je potřeba inicializovat veškere potřebné hodnoty.
+Pro kód v C++ je na zčátek potřeba inicializovat veškere potřebné hodnoty.
 např:
 
 \begin{lstlisting}[style=Python, caption={Inicializace potřebných hodnot}]
@@ -584,22 +594,45 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 \end{lstlisting}
 
 
-Jak jsem již zmiňovala výše zádrhel byl, když se do ramene posílali krajní hodnoty(0 a 180). Kvůli tomu jsem je nastavila na 2 a 160. a to je uložene v proměnných min a max.
-V proměnné servoPos jse uložen počet všech stavu ve kterých se moje rameno může ncházet.
-Jelikož obsahuje 4 serva, tak jsem pro ně vytvořila pole. A každé potřebuje svůj pin k tomu je pole servoPins.
-
-
-
+\begin{itemize}
+	\item Jak jsem již zmiňovala výše zádrhel byl, když se do ramene posílali krajní hodnoty(0 a 180). Kvůli tomu jsem je nastavila na 2 a 160. a to je uložene v proměnných min a max.
+	\item changeMode je pro přehazování mezi snímáním počtu prstu nebo vzdálenosti mezi prsty
+	
+\begin{figure}[h]
+	
+	\centering
+	\includegraphics[width=0.3\linewidth]{image/mody.jpg} 
 	
 	
+	\caption{dvá módy pro kontrolu ramene \cite{módy ramene}.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
+\end{figure}
+\item   V proměnné servoPos je uložen počet všech stavu ve kterých se moje rameno může nacházet.
+\item Jelikož obsahuje 4 serva, tak jsem pro ně vytvořila pole. A každé potřebuje svůj pin k tomu je proměnná servoPins.
+	
+\end{itemize}
 
+
+
+\begin{lstlisting}[style=Python, caption={podmínka pro přepínání módu}]
+if(j == (servoMoves[data][0] -1)) {
+	if(data == 0 || data == 1) {
+		changeMode = true;
+		mode = data;
+	}
+\end{lstlisting}
+
+	\begin{itemize}
+		\item Tahle jednoduchá podmínka je vytvořena pro kontrolu, kde se zroná nachází rameno. A když se nachází nahoře nebo dole, tak se přepné mód pro měření vzdálenosti. Ať se může chytnout nebo pustit kulička.
+
+	
+\end{itemize}
+	
 	
 	\chapter*{Závěr}
 	\addcontentsline{toc}{chapter}{Závěr}
 	
-	Cílem samotné práce bylo rozpohybovat rameno a udělat si jasno jak fungují gesta. Ve finální verzi rameno je schopno uchytit kuličku a přenést ji z konce na začátek. Všechno to je vyřešeno pomocí Pythonu a C++. Využití tohohle projektu může být různé. Například v továrnách, ve skladech, v nanochirurgii nebo jako vzděkávácí hračky. Začátečný cíl se mi podařilo splnit a rameno funguje tak, jak jsem si původně představovala při 
-	zahájení vývoje. I přes můj výkon kód přece jen není napsán nejoptimálněji a věřím, že by mohl 
-	být mnohem lépe zkonstruován, což do budoucná bych mohla opravit. Také později bych se chtěla víc zaměřit na knihovnu OpenCV a prozkoumat další její funkce. 
+	Cílem samotné práce bylo rozpohybovat rameno a udělat si jasno jak fungují knihovny. Ve finální verzi rameno je schopno uchytit kuličku a přenést ji z konce na začátek. Všechno to je vyřešeno pomocí Pythonu a C++. Využití tohohle projektu může být různé. Například v továrnách, ve skladech, v nanochirurgii nebo jako vzdělávácí hračky. Začátečný cíl se mi podařilo splnit a rameno funguje tak, jak jsem si původně představovala při zahájení vývoje. I přes můj výkon kód přece jen není napsán nejoptimálněji a věřím, že by mohl být mnohem lépe zkonstruován, což do budoucná bych mohla opravit. Také později bych se chtěla víc zaměřit na knihovnu OpenCV a prozkoumat další její funkce. 
 
 	
 	%% literatura
