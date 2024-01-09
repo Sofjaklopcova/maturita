@@ -13,7 +13,7 @@ mpDraw = mp.solutions.drawing_utils
 finger_Coord = [(8, 6), (12, 10), (16, 14), (20, 18)]
 thumb_Coord = (4, 2)
 
-com = "com3"  # nastaveni portu arduina
+com = "com7"  # nastaveni portu arduina
 change = False
 arduinoSerial = serial.Serial(com, 9600)
 

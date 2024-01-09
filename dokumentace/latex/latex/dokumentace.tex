@@ -26,6 +26,14 @@ openright
 \newcommand\skolniRok{2023/24} %% vyplň rok
 \newcommand\datumOdevzdani{1. 1. 2024} %% vyplň rok
 \newcommand\nazevPrace{Robotické rameno pohybující se pomocí gest} %% vyplň název své práce
+\let\oldchapter\chapter
+\renewcommand{\chapter}{
+	\clearpage
+	\pagestyle{fancy}
+	\oldchapter
+}
+
+
 
 \title{\nazevPrace} %% -- Název tvé práce
 \author{\jmenoAutora} %% -- tvé jméno
@@ -215,7 +223,6 @@ openright
 	style=JSES6Base
 }
 
-
 %% Bordel pro práci - můžeš smáznout :) 
 %%%%%%%%%%%%%%%%%%%
 
@@ -357,13 +364,13 @@ openright
 	\addcontentsline{toc}{chapter}{Úvod}
 	
 
-Tahle dokumentace vysvětluje celkovou funčnost mého projektu. Již hned jakmile jsme byli seznámení s tim, že čtvrtý ročník musíme zakončit ročnikovým projektem. Byla jsem rozhodlá pro Hardware. Po dlouhém a náročném pátrání a s dopomocí pana Godovského, bylo zvoleno robotické rameno. Bohužel samotné ovládání mě zavedlo primárně do Softwaru.
+Tahle dokumentace vysvětluje celkovou funkčnost mého projektu. Kdyý jsme byli seznámení s tím, že čtvrtý ročník musíme zakončit ročnikovým projektem, byla jsem už rozhodnutá, že se můj projekt bude zabývat spíše Hardwarem. Po dlouhém a náročném pátrání a s pomocí pana Godovského jsem si pro svůj projekt nakonec vybrala robotické rameno. Bohužel samotné ovládání mě zavedlo primárně do Softwaru.
 
 Rameno je ovládáné předvolenými gesty snímanými z kamery notebooku. Byl také nápad kompletně ovládat rameno způsobem, že rameno kopíruje pohyb ruky. Ale k tomu bylo potřeba dokoupit Pohyblivý senzor Kinect pro Xbox. To je ale celkem finančně náročné, tudíž od toho jsem odstoupila.	
 
 Cílem projektu bylo zprovoznit pohyb ramene celkem jednoduchým ale také efektivním způsobem. Diky tomu jsem si skvěle procvičila Python a C++. Motivoval mě ten pocit že to rameno rozpohýbuji. 
 
-Hnedka v první kapitole nalezneté  všechny potřenbé součástky k sestavení samotného ramene. To jsem ale nesestavovala já tudíž se budu věnovat spíš softwaru. Je to doprovázené krátkou teorii o využitých technologiich. Nakonec také samozřejmě nebudou chybět odkazy ne všechny využité zdroje. 
+Hned v první kapitole naleznete  všechny potřebné součástky k sestavení samotného ramene. To jsem ale nesestavovala já, tudíž se budu věnovat spíš softwaru. Je to doprovázené krátkou teorii o využitých technologiích. Nakonec také samozřejmě nebudou chybět odkazy ne všechny využité zdroje. 
 %Tipy k psaní úvodu
 %Je povinný, nadpis neměňte, rozsah - max. 1 strana. 
 %Tato část práce obsahuje: 
@@ -380,7 +387,7 @@ Hnedka v první kapitole nalezneté  všechny potřenbé součástky k sestaven�
 	\includegraphics[width=0.9\linewidth]{image/princip.jpg} 
 	
 	
-	\caption{princip fungování projektu \cite{princip}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Princip fungování projektu.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:princip} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -424,7 +431,7 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 	\centering
 	\includegraphics[width=0.6\linewidth]{image/arduino.jpg} 
 	
-	\caption{Arduino nano 328 \cite{Arduino}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Arduino nano 328 } %% popisek obrázku, nezapomeň na citace!
 	\label{fig:Arduino} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -439,10 +446,10 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 \begin{figure}[h]
 	
 	\centering
-	\includegraphics[width=0.4\linewidth]{image/arduino.jpg} 
+	\includegraphics[width=0.5\linewidth]{image/kleste.jpg} 
 	
-	\caption{servo nacházejíci se v kleštich ramene\cite{servo-kleste}.} %% popisek obrázku, nezapomeň na citace!
-	\label{fig:servo-kleste} %% označení až budeš chtít na obrázek odkazovat
+	\caption{Servo nacházejíci se v kleštich ramene\cite{servo-kleste}.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:Servo-kleste} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
 	Zbylé tři se zabývají rotací a pohyby nahoru-dolů, dopředu-dozadu
@@ -450,10 +457,10 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 \begin{figure}[h]
 	
 	\centering
-	\includegraphics[width=0.3\linewidth]{image/arduino.jpg} 
+	\includegraphics[width=0.5\linewidth]{image/serva.jpg} 
 	
-	\caption{Serva v těle ramene\cite{serva}.} %% popisek obrázku, nezapomeň na citace!
-	\label{fig:serva} %% označení až budeš chtít na obrázek odkazovat
+	\caption{Serva v těle ramene.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:Serva} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
 \newpage
@@ -466,7 +473,7 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 	\includegraphics[width=0.9\linewidth]{image/arduino.jpg} 
 	
 	
-	\caption{zapojení ramene  \cite{obvod}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Zapojení ramene.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:obvod} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -488,7 +495,7 @@ OpenCV je multiplatformní svobodná knihovna pro práci s obrazem.
 Tuto knihovnu jsem využila na celkové zpracování obrazu z kamery mého notebooku
 
 
-\begin{lstlisting}[style=Python, caption={obraz, a jeho převedení do správného formátu}]
+\begin{lstlisting}[style=Python, caption={Obraz, a jeho převedení do správného formátu}]
 cap = cv2.VideoCapture(0)
 ...
 image = cap.read()
@@ -498,7 +505,7 @@ results = hands.process(imageRGB)
 
 Převede snímáný obraz do formátu RGB, který potřebujem pro vykreslení pixelů ve správném pořadí.
 
-\subsubsection{knihovna mediapipe}
+\subsubsection{Knihovna MediaPipe}
 
 Tahle knihovna se zaměřuje na detekci lidských části těla.
 Já využila pro svůj projekt pouze detekci dlaní.
@@ -510,7 +517,7 @@ Pro detekci potřebuje mít orientační body ruky. Model ručního orientační
 	\includegraphics[width=0.8\linewidth]{image/orientacniBody.jpg} 
 	
 	
-	\caption{orientacni body dlaně \cite{orientacni body dlaně}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Orientacni body dlaně.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:obvod} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -525,7 +532,7 @@ Další výpočty provedla také při zachycení vzdálenosti prstů potřebné 
 	\includegraphics[width=0.4\linewidth]{image/prikladGesta.PNG} 
 	
 	
-	\caption{použití úhlu v gestech \cite{uhly v gestech}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Použití úhlu v gestech.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 \begin{figure}[h]
@@ -534,7 +541,7 @@ Další výpočty provedla také při zachycení vzdálenosti prstů potřebné 
 	\includegraphics[width=0.2\linewidth]{image/vzdalenost.PNG} 
 	
 	
-	\caption{použití úhlu v gestech \cite{uhly v gestech}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Použití měření vzdálenosti v gestech.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:vzdalenost} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 
@@ -578,8 +585,8 @@ Pro kód v C++ je na zčátek potřeba inicializovat veškere potřebné hodnoty
 např:
 
 \begin{lstlisting}[style=Python, caption={Inicializace potřebných hodnot}]
-const int min= 2;  // minimalní hodnota pro pozici ramene
-const int max = 160; // maximalní hodnota pro pozici ramene
+const int min= 2;  // minimalní hodnota rozmezí pro vzdálenost
+const int max = 160; // maximalní hodnota rozmezí pro vvzdálenost
 
 bool end;
 int data = 0;
@@ -595,7 +602,7 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 
 
 \begin{itemize}
-	\item Jak jsem již zmiňovala výše zádrhel byl, když se do ramene posílali krajní hodnoty(0 a 180). Kvůli tomu jsem je nastavila na 2 a 160. a to je uložene v proměnných min a max.
+	\item Jelikož potřebujeme pro pohyb kleští hodnoty mezi 0 - 180, musíme posílanou vzdálenost přemapovat a k tomu využívám proměnné min a max které nám značí rozmezí posílaných hodnot
 	\item changeMode je pro přehazování mezi snímáním počtu prstu nebo vzdálenosti mezi prsty
 	
 \begin{figure}[h]
@@ -604,7 +611,7 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 	\includegraphics[width=0.3\linewidth]{image/mody.jpg} 
 	
 	
-	\caption{dvá módy pro kontrolu ramene \cite{módy ramene}.} %% popisek obrázku, nezapomeň na citace!
+	\caption{Dvá módy pro kontrolu ramene.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
 \item   V proměnné servoPos je uložen počet všech stavu ve kterých se moje rameno může nacházet.
@@ -614,7 +621,7 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 
 
 
-\begin{lstlisting}[style=Python, caption={podmínka pro přepínání módu}]
+\begin{lstlisting}[style=Python, caption={Podmínka pro přepínání módu}]
 if(j == (servoMoves[data][0] -1)) {
 	if(data == 0 || data == 1) {
 		changeMode = true;
@@ -623,13 +630,12 @@ if(j == (servoMoves[data][0] -1)) {
 \end{lstlisting}
 
 \begin{itemize}
-		\item Tahle jednoduchá podmínka je vytvořena pro kontrolu, kde se zroná nachází rameno. A když se nachází nahoře nebo dole, tak se přepné mód pro měření vzdálenosti. Ať se může chytnout nebo pustit kulička.
+		\item Tahle jednoduchá podmínka je vytvořena pro kontrolu, kde se zrovna nachází rameno. A když se nachází nahoře nebo dole, tak se přepné mód pro měření vzdálenosti. Ať se může chytnout nebo pustit kulička.
 
 	
 \end{itemize}
 	
-\begin{lstlisting}[style=Python, caption={dvourozměrné pole na potřebné hodnoty}]
-	\begin{lstlisting}[style=Python, caption={dvourozměrné pole na potřebné hodnoty}]
+\begin{lstlisting}[style=Python, caption={Dvourozměrné pole na potřebné hodnoty}]
 	 int servoValues [13] [3] = {
 		{20,50,20},  //puvodni stav 
 		{170,80,45}, //dole sběr kuličky cast1
@@ -644,8 +650,7 @@ if(j == (servoMoves[data][0] -1)) {
 			
 	\end{itemize}
 	
-\begin{lstlisting}[style=Python, caption={další pole pro }]
-	\begin{lstlisting}[style=Python, caption={podmínka pro přepínání módu}]
+\begin{lstlisting}[style=Python, caption={Další pole pro několik hodnot }]
 	int servoMoves [servoPose] [3] = {
 		{2,1,500}, //dolu ke kulice 1
 		{2,3,500}, //nahoru ke kulice 2
@@ -659,9 +664,7 @@ if(j == (servoMoves[data][0] -1)) {
 		
 	\end{itemize}
 
-\begin{lstlisting}[style=Python, caption={funkce na rozpohybocání ramene}]
-	\begin{lstlisting}[style=Python, caption={funkce na rozpohybocání ramene}]
-	
+\begin{lstlisting}[style=Python, caption={Funkce na rozpohybocání ramene}]	
 	void move(int data) {
 		int cycle = 0;
 		for(int j = 0 ; j < servoMoves[data][0];j++) {
@@ -702,26 +705,26 @@ if(j == (servoMoves[data][0] -1)) {
 
 	
 	%% literatura
-	\renewcommand\bibname{Literatura}
+	\renewcommand\bibname{Seznam použitých zdrojů}
 	\begin{thebibliography}{99}
-		\addcontentsline{toc}{chapter}{Literatura}
+		\addcontentsline{toc}{chapter}{Seznam použitých zrdojů}
 		\bibitem{sablonaSOC}{Základní informace o gestech} [Online].  2023 CEMI MBA Studies s.r.o. [cit. 2020-08-24]. Dostupné z: \url{https://www.cemi.cz/blog/neverbalni-komunikace-co-prozradi-gesta}
 		
 		\bibitem{LaTeXprirucka} {Typy gest v běžném životě} [online]. 1998 [cit. 2020-08-24]. Dostupné z: \url{https://orangeacademy.cz/clanky/rec-tela/}
 		
 		\bibitem{wikibooksLaTeX} Řeč tela a znakový jazyk, 2023, Slůně - svět jazyků, s.r.o. Dostupné z: \url{https://www.slune.cz/aktualita/znakovy-jazyk/}
 		
-		\bibitem{wikibooksLaTeX} knihovna math v pythonu Copyright © 2023 itnetwork.cz.
+		\bibitem{wikibooksLaTeX} Knihovna math v pythonu Copyright © 2023 itnetwork.cz.
 	 \url{https://www.itnetwork.cz/python/zaklady/python-tutorial-knihovny-math-a-random}
-	 	\bibitem{wikibooksLaTeX} knihovna opencv v pythonu Copyright © 2023 itnetwork.cz.
+	 	\bibitem{wikibooksLaTeX} Knihovna opencv v pythonu Copyright © 2023 itnetwork.cz.
 	 \url{https://www.python-programator.cz/clanky/python-pro-zpracovani-obrazu-opencv}
-	 \bibitem{wikibooksLaTeX} komunikace s arduinem  © 2023 Arduino
+	 \bibitem{wikibooksLaTeX} Komunikace s arduinem  © 2023 Arduino
 	 \url{https://projecthub.arduino.cc/ansh2919/serial-communication-between-python-and-arduino-663756}
-	 \bibitem{wikibooksLaTeX}komunikace s arduinem 2 Copyright © 2023 Circuit Digest. All rights reserved.
+	 \bibitem{wikibooksLaTeX}Komunikace s arduinem 2 Copyright © 2023 Circuit Digest. All rights reserved.
 	 \url{https://circuitdigest.com/microcontroller-projects/arduino-python-tutorial}
-	  \bibitem{© 2023 Arduino}zkouška funkčnosti 
+	  \bibitem{© 2023 Arduino}Zkouška funkčnosti 
 	 \url{https://docs.arduino.cc/learn/electronics/servo-motors}
-	  \bibitem{wikibooksLaTeX}zkouška funkčnosti 
+	  \bibitem{wikibooksLaTeX}Zkouška funkčnosti 
 	 \url{https://problemsolvingwithpython.com/11-Python-and-External-Hardware/11.03-Controlling-an-LED/}
 	 
 	 
@@ -729,13 +732,7 @@ if(j == (servoMoves[data][0] -1)) {
 		
 		
 		
-		\bibitem{stackExchange} \textit{TeX - LaTeX Stack Exchange} [online]. Stack Exchange, 2020 [cit. 2020-09-01]. Dostupné z: \url{https://tex.stackexchange.com}
-		
-		\bibitem{sspuLogo} \textit{Střední škola průmyslová a umělecká Opava} [online]. [cit. 2023-11-11]. Dostupné z: \url{https://www.sspu-opava.cz}
 	
-		\bibitem{citacePRO}\textit{Citace PRO} [online]. Citace.com, 2020 [cit. 2020-08-31]. Dostupné z: \url{https://www.citacepro.com}
-	
-		\bibitem{Born2019} BORN, Max a Emil WOLF. \textit{Principles of optics: electromagnetic theory of propagation, interference and diffraction of light}. 7th (expanded) edition. Reprinted wirth corrections 2002. 15th printing 2019. Cambridge: Cambridge University Press, 2019. ISBN 978-0-521-64222-4.
 	\end{thebibliography}
 	
 	%% obrázky 

@@ -1,13 +1,13 @@
 \babel@toc {czech}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces princip fungování projektu \cite {princip}.}}{5}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Princip fungování projektu.}}{5}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arduino nano 328 \cite {Arduino}.}}{8}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces servo nacházejíci se v kleštich ramene\cite {servo-kleste}.}}{9}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Serva v těle ramene\cite {serva}.}}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces zapojení ramene \cite {obvod}.}}{10}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arduino nano 328 }}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Servo nacházejíci se v kleštich ramene\cite {servo-kleste}.}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Serva v těle ramene.}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Zapojení ramene.}}{10}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces orientacni body dlaně \cite {orientacni body dlaně}.}}{12}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces použití úhlu v gestech \cite {uhly v gestech}.}}{12}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces použití úhlu v gestech \cite {uhly v gestech}.}}{12}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces dvá módy pro kontrolu ramene \cite {módy ramene}.}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Orientacni body dlaně.}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Použití úhlu v gestech.}}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Použití měření vzdálenosti v gestech.}}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Dvá módy pro kontrolu ramene.}}{14}{figure.caption.13}%

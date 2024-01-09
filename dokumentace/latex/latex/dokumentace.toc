@@ -11,9 +11,9 @@
 \contentsline {chapter}{\numberline {3}Software}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Získání gest}{11}{section.3.1}%
 \contentsline {subsubsection}{Knihovna OpenCV}{11}{section.3.1}%
-\contentsline {subsubsection}{knihovna mediapipe}{11}{lstnumber.3.1.5}%
+\contentsline {subsubsection}{Knihovna MediaPipe}{11}{lstnumber.3.1.5}%
 \contentsline {subsubsection}{Knihovna math}{12}{figure.caption.10}%
 \contentsline {section}{\numberline {3.2}Ověření funkčnostní ramene}{13}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Práce s Arduinem}{14}{section.3.3}%
 \contentsline {chapter}{Závěr}{17}{chapter*.14}%
-\contentsline {chapter}{Literatura}{19}{chapter*.15}%
+\contentsline {chapter}{Seznam použitých zrdojů}{19}{chapter*.15}%
