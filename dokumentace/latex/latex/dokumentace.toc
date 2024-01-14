@@ -5,15 +5,17 @@
 \contentsline {section}{\numberline {2.1}Netištěné součástky}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Arduino nano 328}{8}{subsection.2.1.1}%
 \contentsline {subsubsection}{popis}{8}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Servo }{9}{subsection.2.1.2}%
-\contentsline {subsubsection}{popis}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.2}Servomotory }{9}{subsection.2.1.2}%
+\contentsline {subsubsection}{Popis}{9}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Obvod}{10}{subsection.2.1.3}%
-\contentsline {chapter}{\numberline {3}Software}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Získání gest}{11}{section.3.1}%
-\contentsline {subsubsection}{Knihovna OpenCV}{11}{section.3.1}%
-\contentsline {subsubsection}{Knihovna MediaPipe}{11}{lstnumber.3.1.5}%
-\contentsline {subsubsection}{Knihovna math}{12}{figure.caption.10}%
-\contentsline {section}{\numberline {3.2}Ověření funkčnostní ramene}{13}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Práce s Arduinem}{14}{section.3.3}%
-\contentsline {chapter}{Závěr}{17}{chapter*.14}%
-\contentsline {chapter}{Seznam použitých zrdojů}{19}{chapter*.15}%
+\contentsline {chapter}{\numberline {3}Software}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Získání gest}{13}{section.3.1}%
+\contentsline {subsubsection}{Knihovna OpenCV}{13}{section.3.1}%
+\contentsline {subsubsection}{Knihovna MediaPipe}{13}{lstnumber.3.1.5}%
+\contentsline {subsubsection}{Knihovna math}{14}{figure.caption.10}%
+\contentsline {section}{\numberline {3.2}Ověření funkčnostní ramene}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Práce s Arduinem}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Inicializace hodnot}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Manuál na ovládání}{19}{subsection.3.3.2}%
+\contentsline {chapter}{Závěr}{21}{chapter*.15}%
+\contentsline {chapter}{Seznam použitých zrdojů}{23}{chapter*.16}%

@@ -25,11 +25,15 @@ openright
 \newcommand\jmenoAutora{Sofja Klopcová}  %% vyplň své jméno
 \newcommand\skolniRok{2023/24} %% vyplň rok
 \newcommand\datumOdevzdani{1. 1. 2024} %% vyplň rok
-\newcommand\nazevPrace{Robotické rameno pohybující se pomocí gest} %% vyplň název své práce
+\newcommand\nazevPrace{Robotické rameno ovládáné pomocí gest} %% vyplň název své práce
 \let\oldchapter\chapter
 \renewcommand{\chapter}{
 	\clearpage
 	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyfoot[c]{\thepage}
+	\
 	\oldchapter
 }
 
@@ -294,7 +298,7 @@ openright
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\noindent{\large{\bfseries{Poděkování}\\}}
-	\noindent Chci poděkovat Pánu učiteli Godovskému za poskytnutí veškerého hardweru a také konzultací během celé práci.
+	\noindent Chci poděkovat panu učiteli Godovskému za poskytnutí veškerého hardware a konzultace během celé práci.
 	
 	\vspace*{0.7\textheight} %% Vertikální mezeru je možné upravit
 
@@ -324,14 +328,14 @@ openright
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\noindent{\Large{\bfseries{Abstrakt }\\}}
 	\noindent 
-	Výsledkem projektu je funkčí pohyblivé rameno, které zvláda chytnout kuličku z konce stavebnice a posune ji na začátek a také za dobře odvedenou práci se uklonit. Ovládáne je gesty které jsou snímány kamerou notebooku. Hlavním aspektem projektu je kontrola jednotlivých serv ramene pomocí gest. Kód který umožní zobrazovat  gesta je psaný v Pythonu, a holá pohyblivost ramene je obstarána Arduinem které využívá C++. 
+	Výsledkem projektu je funkční pohyblivé rameno, které zvládá chytnout kuličku z~konce stavebnice a posune ji na začátek a také za dobře odvedenou práci se uklonit. Ovládané je gesty které jsou snímány kamerou notebooku. Hlavním aspektem projektu je kontrola jednotlivých servomotoru ramene pomocí gest. Kód který umožní zobrazovat  gesta je psaný v Pythonu, a holá pohyblivost ramene je obstarána Arduinem které využívá C++. 
 	
 	
 	\vspace{18pt}
 	
 	\noindent{\large{\bfseries{Klíčová slova}}}
 	
-	\noindent poghyblivé rameno, gesta, Python, C++ \dots 
+	\noindent poghyblivé rameno, gesta, Python, C++, Serva, Servomotory, knihovny, ukázky. 
 	
 	\vspace{18pt}
 
@@ -347,7 +351,7 @@ openright
 	
 	\noindent Template, \LaTeX, High school proffessional activity, \dots 
 	
-	\clearpage %% Zalomení stránky
+	\cleardoublepage %% Zalomení stránky
 
 %% Stránka s generovaným obsahem
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -364,13 +368,15 @@ openright
 	\addcontentsline{toc}{chapter}{Úvod}
 	
 
-Tahle dokumentace vysvětluje celkovou funkčnost mého projektu. Kdyý jsme byli seznámení s tím, že čtvrtý ročník musíme zakončit ročnikovým projektem, byla jsem už rozhodnutá, že se můj projekt bude zabývat spíše Hardwarem. Po dlouhém a náročném pátrání a s pomocí pana Godovského jsem si pro svůj projekt nakonec vybrala robotické rameno. Bohužel samotné ovládání mě zavedlo primárně do Softwaru.
 
-Rameno je ovládáné předvolenými gesty snímanými z kamery notebooku. Byl také nápad kompletně ovládat rameno způsobem, že rameno kopíruje pohyb ruky. Ale k tomu bylo potřeba dokoupit Pohyblivý senzor Kinect pro Xbox. To je ale celkem finančně náročné, tudíž od toho jsem odstoupila.	
+Tato dokumentace detailně popisuje celkovou funkcionalitu mého projektu. Když jsme byli seznámeni s požadavky na ukončení čtvrtého ročníku ročníkovým projektem, rozhodla jsem se zaměřit svůj projekt především na oblast hardwaru. Po dlouhém a náročném průzkumu a s pomocí pana Godovského jsem nakonec zvolila robotické rameno pro svůj projekt. Bohužel, proces ovládání mě přivedl zejména k softwarovým aspektům.
 
-Cílem projektu bylo zprovoznit pohyb ramene celkem jednoduchým ale také efektivním způsobem. Diky tomu jsem si skvěle procvičila Python a C++. Motivoval mě ten pocit že to rameno rozpohýbuji. 
+Rameno je ovládáno pomocí předdefinovaných gest zachycených kamerou notebooku. Původně byl také zvažován koncept úplného ovládání ramene tak, aby kopírovalo pohyb lidské ruky. Nicméně k realizaci tohoto nápadu by bylo nutné dokoupit Pohyblivý senzor Kinect pro Xbox, což by bylo spojeno s významnými finančními náklady. Z tohoto důvodu jsem se rozhodla od tohoto přístupu ustoupit.
 
-Hned v první kapitole naleznete  všechny potřebné součástky k sestavení samotného ramene. To jsem ale nesestavovala já, tudíž se budu věnovat spíš softwaru. Je to doprovázené krátkou teorii o využitých technologiích. Nakonec také samozřejmě nebudou chybět odkazy ne všechny využité zdroje. 
+Cílem projektu bylo zprovoznit pohyb ramene celkem jednoduchým ale také efektivním způsobem. Díky tomu jsem si skvěle procvičila Python a C++. Motivoval mě ten pocit že to rameno rozpohybuji. 
+
+
+V první kapitole naleznete seznam všech potřebných součástek pro sestavení samotného ramene. Samotnou fyzickou montáž jsem však neprováděla, a proto se budu věnovat zejména softwarovým aspektům. Tato část je doplněna krátkou teorií o využitých technologiích. V závěru kapitoly jsou uvedeny odkazy na všechny použité zdroje.
 %Tipy k psaní úvodu
 %Je povinný, nadpis neměňte, rozsah - max. 1 strana. 
 %Tato část práce obsahuje: 
@@ -380,9 +386,10 @@ Hned v první kapitole naleznete  všechny potřebné součástky k sestavení s
 
 
 \chapter{Princip fungování projektu}
+
+Zde je strukturovaný náčrt fungování celého projektu. Kamera zachytává specifické gesto, a pomocí kódu využívajícího knihoven převádí obraz na nezbytné hodnoty, které jsou následně rozpoznány robotickým ramenem. Tyto hodnoty jsou poté předány do Arduina, který následně přiřazuje odpovídající signály na určité piny, aby serva ramene byla schopna rozpoznat a vykonat požadovanou akci.
 \begin{figure}[h]
-	Tady se nachází strukturovaný náčrt, jak funguje celý projekt.
-	A to tak že kamera snímá určité gesto. Kód s využitím knihoven obraz převádí na potřebné hodnoty které rozpozná rameno. Potom se pošlou do Arduina	a ono ve své řadě je dá na určité piny aby serva rozpoznala co mají dělat.
+	
 	\centering
 	\includegraphics[width=0.9\linewidth]{image/princip.jpg} 
 	
@@ -394,7 +401,7 @@ Hned v první kapitole naleznete  všechny potřebné součástky k sestavení s
 
 \chapter{Hardware}
 	\section{Netištěné součástky}
-Jelikož jsem to rameno nesestavovala tak nemam možnost popisovat postup, ale tady je výčet potřebných součástek 
+Vzhledem k tomu, že jsem rameno nesestavovala, nemohu poskytnout detailní popis postupu montáže. Nicméně zde je výčet potřebných součástek:
 
 \begin{itemize}
 	\item	 3 - 955 nebo 946 servo
@@ -423,7 +430,7 @@ Návod na samotné sestavení ramene naleznete na \href{https://www.instructable
 \subsection{Arduino nano 328}
 \subsubsection{popis}
 
-Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v další kapitole nahrajeme pomocí USB kabelu do něj a diky správnému zapojení ramene vše skvěle funguje.
+Arduino hraje klíčovou roli při oživení samotného hardwaru. Napsaný kód, který podrobněji popíšu v následující kapitole, je nahrán do mikrokontroléru pomocí USB kabelu. Díky správnému zapojení ramene se dosahuje bezproblémového fungování celého systému.
 
 
 	\begin{figure}[h]
@@ -437,12 +444,11 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 
 \newpage 
 
-\subsection{Servo }
-\subsubsection{popis}
-	Tohle rameno obsahuje tři velké Serva a jedno malé.Každý
-	z nich má také tři výstupy, a to: kabel určený na nějaký port, mínus a plus. 
-	\\
-	To nejmenší se nacházi v kleštičkách 
+\subsection{Servomotory }
+\subsubsection{Popis}
+	
+	Toto rameno zahrnuje tři velká serva a jedno menší. Každé servomotor disponuje třemi výstupy: kabelem určeným pro specifický port, záporným a kladným pólem. 
+	\\ Nejmenší servomotor je umístěno v kleštičkách.
 \begin{figure}[h]
 	
 	\centering
@@ -470,7 +476,7 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 \begin{figure}[h]
 	
 	\centering
-	\includegraphics[width=0.9\linewidth]{image/arduino.jpg} 
+	\includegraphics[width=0.9\linewidth]{image/obvod.jpg} 
 	
 	
 	\caption{Zapojení ramene.} %% popisek obrázku, nezapomeň na citace!
@@ -485,15 +491,13 @@ Arduino napomáha rozhýbat samotný hardwere. Napsaný kód, který popíšu v 
 \chapter{Software}
 
 \section{Získání gest}
-Začneme importem knihoven, a to \textbf{OpenCV}  \textbf{math} a \textbf{mediapipe 0.10.8}  
+Začneme importem knihoven, a to \textbf{OpenCV}  \textbf{math} a \textbf{MediaPipe 0.10.8}  
 
 \subsubsection{Knihovna OpenCV}
-OpenCV je multiplatformní svobodná knihovna pro práci s obrazem.
 
- Samotná knihovna je z velké části napsána v C++, ale poskytuje Python wrapper, díky kterému ji můžeme používat i v Pythonu. 
- OpenCV se používá pro zpracování obrazu z kamer, rozpoznání psaného textu nebo obličejů..
-Tuto knihovnu jsem využila na celkové zpracování obrazu z kamery mého notebooku
+OpenCV představuje multiplatformní svobodnou knihovnu určenou pro manipulaci s obrazem. Tato knihovna je významnou měrou implementována v programovacím jazyce C++, nicméně je dodávána s Python obalem, což umožňuje její použití i v prostředí Pythonu. OpenCV nalézá uplatnění při zpracování obrazu z kamer a provádění úloh, jako je rozpoznávání psaného textu či obličejů.
 
+Osobně jsem tuto knihovnu využila pro celkové zpracování obrazu z integrované kamery mého notebooku.
 
 \begin{lstlisting}[style=Python, caption={Obraz, a jeho převedení do správného formátu}]
 cap = cv2.VideoCapture(0)
@@ -503,13 +507,12 @@ imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 results = hands.process(imageRGB)
 \end{lstlisting}
 
-Převede snímáný obraz do formátu RGB, který potřebujem pro vykreslení pixelů ve správném pořadí.
+Převede snímaný obraz do formátu RGB, který potřebujeme pro vykreslení pixelů ve správném pořadí.
 
 \subsubsection{Knihovna MediaPipe}
+Tato knihovna je specializována na detekci lidských částí těla, přičemž jsem se v rámci svého projektu zaměřila výhradně na detekci dlaní. Pro účely této detekce vyžaduje knihovna orientační body ruky. Model orientačních bodů pro ruku je schopen předpovídat 21 přesných souřadnic pro umístění každého orientačního bodu na ruce.
 
-Tahle knihovna se zaměřuje na detekci lidských části těla.
-Já využila pro svůj projekt pouze detekci dlaní.
-Pro detekci potřebuje mít orientační body ruky. Model ručního orientačního bodu dokáže předpovědět 21 přesných souřadnic umístění každého orientačního bodu na ruce.
+
 
 \begin{figure}[h]
 	
@@ -523,8 +526,7 @@ Pro detekci potřebuje mít orientační body ruky. Model ručního orientační
 
 \subsubsection{Knihovna math}
 
-Ve spolupráci se zvyše zmíněnou knihovnou mi poskytla souřadnice jednotlivých kloubu, pro přesné zachycení ruky. 
-Další výpočty provedla také při zachycení vzdálenosti prstů potřebné k rozhýbání kleštiček
+Ve spolupráci s výše zmíněnou knihovnou jsem získala souřadnice jednotlivých kloubů, což umožnilo přesné zachycení postavení ruky. Kromě toho jsem prováděla další výpočty pro určení vzdálenosti mezi prsty, což bylo nezbytné pro správné identifikování gesta potřebného k ovládání kleštiček.
 
 \begin{figure}[h]
 	
@@ -550,9 +552,7 @@ Další výpočty provedla také při zachycení vzdálenosti prstů potřebné 
 \newpage
 
 \section{Ověření funkčnostní ramene}
-Než jsem mohla začit se sprovozněním ramene dle myšlenky, jsem musela ověřit jejích funkčnost a taky zjistit jak se vlastně jednotlivá část hýbe.
-Proto jsem použila jednoduhý kód. Připojením pokaždé jednoho drátku do desky s arduinem jsem se postupně dozvěděla zaprve jaký drátek zodpovídá za co a také i jak se hybou. Byl tam jeden zadrhel a to to že serva stávkovaly, když jsem posílala ty krajní hodnoty(0,180) po úpravě intervalu ve funkci, se všechno srovnalo.
-
+Předtím, než jsem mohla začít s implementací nápadu na pohyblivé rameno, bylo nezbytné ověřit jeho funkčnost a porozumět pohybu jednotlivých částí. K tomuto účelu jsem využila jednoduchý kód. Postupně jsem připojovala jednotlivé drátky k desce s Arduino a zjišťovala, který drát odpovídá za kterou část a jak se tato část pohybuje. Narazila jsem na jednu komplikaci, kdy servomotory stávkovaly, když jsem posílala extrémní hodnoty (0, 180). Po upravení rozsahu v intervalu ve funkci se vše dostalo do pořádku.
 \begin{lstlisting}[style=Python, caption={Ukázka kódu k ověření funkčnosti}]
 #include <Servo.h>
 
@@ -578,10 +578,10 @@ void loop() {
 \newpage
 
 \section{Práce s Arduinem}
-
-První věc, kterou musíme vzít v úvahu, je, že nezbytně potřebujeme mít na svém počítači program Python a také PySerial. Většinu kódu v Pythonu se dá sehnat na internetu a odkazy na ty stránky nalezenete níže v použité literatuře. 
+\subsection{Inicializace hodnot}
+První věc, kterou musíme vzít v úvahu, je, že nezbytně potřebujeme mít na svém počítači program Python a také PySerial. Většinu kódu v Pythonu se dá sehnat na internetu a odkazy na ty stránky naleznete níže v použité literatuře. 
 Takže se jdeme přesunout k popisu.
-Pro kód v C++ je na zčátek potřeba inicializovat veškere potřebné hodnoty.
+Pro kód v C++ je na začátek potřeba inicializovat veškeré potřebné hodnoty.
 např:
 
 \begin{lstlisting}[style=Python, caption={Inicializace potřebných hodnot}]
@@ -590,7 +590,7 @@ const int max = 160; // maximalní hodnota rozmezí pro vvzdálenost
 
 bool end;
 int data = 0;
-int serialData =0;
+int serialData = 0;
 bool changeMode;
 int mode;
 const int servoPose = 6; //kolik stavu má rameno
@@ -602,9 +602,9 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 
 
 \begin{itemize}
-	\item Jelikož potřebujeme pro pohyb kleští hodnoty mezi 0 - 180, musíme posílanou vzdálenost přemapovat a k tomu využívám proměnné min a max které nám značí rozmezí posílaných hodnot
-	\item changeMode je pro přehazování mezi snímáním počtu prstu nebo vzdálenosti mezi prsty
-	
+	\item 
+	Vzhledem k tomu, že pro řízení pohybu kleští potřebujeme hodnoty v rozmezí od 0 do 180, je nutné přemapovat posílanou vzdálenost. K tomu účelu využívám proměnné "min" a "max", které určují rozsah posílaných hodnot.
+	\item Dále je tu proměnná "changeMode", která slouží k přepínání mezi režimem snímání počtu prstů a režimem měření vzdálenosti mezi prsty.
 \begin{figure}[h]
 	
 	\centering
@@ -614,15 +614,15 @@ const byte servoPins [] = {2,3,4,5}; //piny pro serva
 	\caption{Dvá módy pro kontrolu ramene.} %% popisek obrázku, nezapomeň na citace!
 	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
 \end{figure}
-\item   V proměnné servoPos je uložen počet všech stavu ve kterých se moje rameno může nacházet.
-\item Jelikož obsahuje 4 serva, tak jsem pro ně vytvořila pole. A každé potřebuje svůj pin k tomu je proměnná servoPins.
+\item   V proměnné "servoPos" je uložen počet všech možných stavů, ve kterých se může nacházet mé rameno.
+\item Vzhledem k tomu, že má rameno 4 servomotory, vytvořila jsem pro ně pole. Každý servomotor vyžaduje svůj vlastní pin, který je následně specifikován v proměnné "servoPins".
 	
 \end{itemize}
 
 
 
 \begin{lstlisting}[style=Python, caption={Podmínka pro přepínání módu}]
-if(j == (servoMoves[data][0] -1)) {
+if(j == (servoMoves[data][0] - 1)) {
 	if(data == 0 || data == 1) {
 		changeMode = true;
 		mode = data;
@@ -630,7 +630,7 @@ if(j == (servoMoves[data][0] -1)) {
 \end{lstlisting}
 
 \begin{itemize}
-		\item Tahle jednoduchá podmínka je vytvořena pro kontrolu, kde se zrovna nachází rameno. A když se nachází nahoře nebo dole, tak se přepné mód pro měření vzdálenosti. Ať se může chytnout nebo pustit kulička.
+		\item Tato jednoduchá podmínka byla vytvořena pro kontrolu aktuální polohy ramene. Pokud se rameno nachází v horní nebo dolní poloze, dojde k přepnutí režimu pro měření vzdálenosti. To umožňuje manipulaci s ramenem, například pro chycení nebo pustení kuličky.
 
 	
 \end{itemize}
@@ -646,7 +646,12 @@ if(j == (servoMoves[data][0] -1)) {
 		\end{lstlisting}
 		
 \begin{itemize}
-	\item Dále máme dvourozměrné pole pro hodnoty pro serva. jsou vždy v jednom řádku jen tři, protože pro ovádání serva v kleštích jsou potřeba jiné hodnoty.
+	\item Dále používáme dvourozměrné pole pro uložení hodnot pro servomotory. Hodnoty jsou vždy uspořádány ve třech sloupcích v jednom řádku, jelikož pro ovládání servomotorů v kleštích jsou potřebné odlišné hodnoty.
+	
+	
+	
+	
+
 			
 	\end{itemize}
 	
@@ -660,7 +665,14 @@ if(j == (servoMoves[data][0] -1)) {
 	\end{lstlisting}
 	
 	\begin{itemize}
-		\item Další pole se skládá z několika různých hodnot. A to na prvním místě počet opakování pohybů, na druhém místě se nachází pořadí hodnot serv z předešlého pole.Poslední hodnota je pro delay.
+		\item Následující pole obsahuje několik různých hodnot. Na prvním místě je počet opakování pohybů, na druhém místě je pořadí hodnot pro servomotory z předchozího pole. Poslední hodnota v poli určuje časový odstup (delay).
+		
+		
+		
+		
+		
+		
+		
 		
 	\end{itemize}
 
@@ -669,10 +681,10 @@ if(j == (servoMoves[data][0] -1)) {
 		int cycle = 0;
 		for(int j = 0 ; j < servoMoves[data][0];j++) {
 			for(int i = 1; i < servoCount;i++) servo[i].write(servoValues[
-											(servoMoves[data][1])+cycle][i -1]);
+											(servoMoves[data][1])+cycle][i - 1]);
 			cycle++;
 			if(cycle > 1) cycle=0;
-			if(j == (servoMoves[data][0] -1)) {
+			if(j == (servoMoves[data][0] - 1)) {
 				if(data == 0 || data == 1) {
 					changeMode = true;
 					mode = data;
@@ -687,12 +699,23 @@ if(j == (servoMoves[data][0] -1)) {
 	\end{lstlisting}
 	
 	\begin{itemize}
-		\item Jedna z nejpodstatnějších funkcí. Je pro rozpohybování ramene.
-		Jakmile se načte jedna hodnota, funkce se posune v cyklu o jedno políčko dál v servoValues, a tak než dojde na konec. Potom se zkontroluje zda data jsou 0 nebo 1 pro pochopení že se rameno nacházi v pozici u  kuličky. Tehdy se změní changeMode a přepne se na měření vzdálenosti mezi prsty.
+		\item Jedná se o jednu z klíčových funkcí, která slouží k pohybu ramena. Jakmile je načtena jedna hodnota, funkce postupuje v cyklu o jeden prvek dál v poli "servoValues", dokud nedojde na konec. Poté se zkontroluje, zda jsou data rovna 0 nebo 1, což signalizuje, zda se rameno nachází v pozici u kuličky. V případě potvrzení této pozice se změní hodnota proměnné "changeMode" a přepne se na režim měření vzdálenosti mezi prsty.
 		
 	\end{itemize}
 	
+\newpage
 	
+\subsection{Manuál na  ovládání}
+
+\begin{figure}[h]
+	
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/manual.png} 
+	
+	
+	\caption{Dvá módy pro kontrolu ramene.} %% popisek obrázku, nezapomeň na citace!
+	\label{fig:uhlyVGestech} %% označení až budeš chtít na obrázek odkazovat
+\end{figure}
 	
 	
 	
@@ -701,11 +724,21 @@ if(j == (servoMoves[data][0] -1)) {
 	\chapter*{Závěr}
 	\addcontentsline{toc}{chapter}{Závěr}
 	
-	Cílem samotné práce bylo rozpohybovat rameno a udělat si jasno jak fungují knihovny. Ve finální verzi rameno je schopno uchytit kuličku a přenést ji z konce na začátek. Všechno to je vyřešeno pomocí Pythonu a C++. Využití tohohle projektu může být různé. Například v továrnách, ve skladech, v nanochirurgii nebo jako vzdělávácí hračky. Začátečný cíl se mi podařilo splnit a rameno funguje tak, jak jsem si původně představovala při zahájení vývoje. I přes můj výkon kód přece jen není napsán nejoptimálněji a věřím, že by mohl být mnohem lépe zkonstruován, což do budoucná bych mohla opravit. Také později bych se chtěla víc zaměřit na knihovnu OpenCV a prozkoumat další její funkce. 
-
+	Cílem celé práce bylo dosáhnout pohybu ramene a získat lepší porozumění fungování příslušných knihoven. Ve finální verzi je rameno schopno úspěšně uchopit kuličku a přesunout ji z konce na začátek. Celý projekt byl implementován pomocí kombinace jazyků Python a C++. Možné využití tohoto projektu může být rozmanité, například v továrnách, skladech, v nanochirurgii nebo jako vzdělávací hračka.
+	
+	Podařilo se mi dosáhnout původního cíle a rameno nyní pracuje tak, jak jsem si představovala na začátku vývoje. I přestože má můj kód určité nedostatky v optimalizaci, věřím, že by mohl být v budoucnu vylepšen. Rovněž plánuji detailněji studovat knihovnu OpenCV a prozkoumat další její funkce.
+	
+	
+	
+	
+	
+	
+	
+	
+	odkaz na github: https://github.com/Sofjaklopcova/maturita
 	
 	%% literatura
-	\renewcommand\bibname{Seznam použitých zdrojů}
+	\renewcommand\bibname{Seznam použitých informačních zdrojů}
 	\begin{thebibliography}{99}
 		\addcontentsline{toc}{chapter}{Seznam použitých zrdojů}
 		\bibitem{sablonaSOC}{Základní informace o gestech} [Online].  2023 CEMI MBA Studies s.r.o. [cit. 2020-08-24]. Dostupné z: \url{https://www.cemi.cz/blog/neverbalni-komunikace-co-prozradi-gesta}
