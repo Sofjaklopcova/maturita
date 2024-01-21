@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  14 JAN 2024 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.28)  14 JAN 2024 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -864,7 +864,7 @@ Kapitola 1.
 <image/princip.jpg, id=106, 1927.2pt x 1204.5pt>
 File: image/princip.jpg Graphic file (type jpg)
 <use image/princip.jpg>
-Package pdftex.def Info: image/princip.jpg  used on input line 394.
+Package pdftex.def Info: image/princip.jpg  used on input line 396.
 (pdftex.def)             Requested size: 396.91325pt x 248.0636pt.
 [5
 
@@ -873,7 +873,7 @@ Package pdftex.def Info: image/princip.jpg  used on input line 394.
 ]
 Kapitola 2.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-07.
+09.
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -883,31 +883,31 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 <image/arduino.jpg, id=122, 1027.84pt x 1027.84pt>
 File: image/arduino.jpg Graphic file (type jpg)
 <use image/arduino.jpg>
-Package pdftex.def Info: image/arduino.jpg  used on input line 439.
+Package pdftex.def Info: image/arduino.jpg  used on input line 441.
 (pdftex.def)             Requested size: 264.61333pt x 264.61295pt.
  [8 <./image/arduino.jpg>]
 <image/kleste.jpg, id=129, 2055.68pt x 1542.76375pt>
 File: image/kleste.jpg Graphic file (type jpg)
 <use image/kleste.jpg>
-Package pdftex.def Info: image/kleste.jpg  used on input line 455.
+Package pdftex.def Info: image/kleste.jpg  used on input line 457.
 (pdftex.def)             Requested size: 220.50887pt x 165.46722pt.
 
 
-LaTeX Warning: Citation `servo-kleste' on page 9 undefined on input line 457.
+LaTeX Warning: Citation `servo-kleste' on page 9 undefined on input line 459.
 
 
-LaTeX Warning: Citation `servo-kleste' on page 9 undefined on input line 457.
+LaTeX Warning: Citation `servo-kleste' on page 9 undefined on input line 459.
 
 <image/serva.jpg, id=130, 2055.68pt x 1542.76375pt>
 File: image/serva.jpg Graphic file (type jpg)
 <use image/serva.jpg>
-Package pdftex.def Info: image/serva.jpg  used on input line 466.
+Package pdftex.def Info: image/serva.jpg  used on input line 468.
 (pdftex.def)             Requested size: 220.50887pt x 165.46722pt.
 [9 <./image/kleste.jpg> <./image/serva.jpg>]
 <image/obvod.jpg, id=138, 1927.2pt x 1204.5pt>
 File: image/obvod.jpg Graphic file (type jpg)
 <use image/obvod.jpg>
-Package pdftex.def Info: image/obvod.jpg  used on input line 479.
+Package pdftex.def Info: image/obvod.jpg  used on input line 481.
 (pdftex.def)             Requested size: 396.91325pt x 248.0636pt.
  [10 <./image/obvod.jpg>] [11
 
@@ -920,9 +920,9 @@ Kapitola 3.
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 502.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-02.
+nput line 498.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
+98.
 
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -930,7 +930,7 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 <image/orientacniBody.jpg, id=153, 1204.5pt x 558.085pt>
 File: image/orientacniBody.jpg Graphic file (type jpg)
 <use image/orientacniBody.jpg>
-Package pdftex.def Info: image/orientacniBody.jpg  used on input line 520.
+Package pdftex.def Info: image/orientacniBody.jpg  used on input line 516.
 (pdftex.def)             Requested size: 352.81552pt x 163.467pt.
 
 
@@ -940,25 +940,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <image/prikladGesta.PNG, id=166, 575.14874pt x 331.99031pt>
 File: image/prikladGesta.PNG Graphic file (type png)
 <use image/prikladGesta.PNG>
-Package pdftex.def Info: image/prikladGesta.PNG  used on input line 534.
+Package pdftex.def Info: image/prikladGesta.PNG  used on input line 530.
 (pdftex.def)             Requested size: 176.40439pt x 101.82172pt.
 <image/vzdalenost.PNG, id=167, 117.43875pt x 191.9672pt>
 File: image/vzdalenost.PNG Graphic file (type png)
 <use image/vzdalenost.PNG>
-Package pdftex.def Info: image/vzdalenost.PNG  used on input line 543.
+Package pdftex.def Info: image/vzdalenost.PNG  used on input line 539.
 (pdftex.def)             Requested size: 88.2022pt x 144.17714pt.
  [14 <./image/orientacniBody.jpg> <./image/prikladGesta.PNG> <./image/vzdalenos
 t.PNG>] [15]
 <image/mody.jpg, id=201, 1927.2pt x 1204.5pt>
 File: image/mody.jpg Graphic file (type jpg)
 <use image/mody.jpg>
-Package pdftex.def Info: image/mody.jpg  used on input line 611.
+Package pdftex.def Info: image/mody.jpg  used on input line 607.
 (pdftex.def)             Requested size: 132.30666pt x 82.68787pt.
  [16 <./image/mody.jpg>] [17] [18]
 <image/manual.png, id=274, 1927.2pt x 1204.5pt>
 File: image/manual.png Graphic file (type png)
 <use image/manual.png>
-Package pdftex.def Info: image/manual.png  used on input line 713.
+Package pdftex.def Info: image/manual.png  used on input line 709.
 (pdftex.def)             Requested size: 352.81552pt x 220.49486pt.
  [19 <./image/manual.png>]
 [20
@@ -968,47 +968,47 @@ Package pdftex.def Info: image/manual.png  used on input line 713.
 ] [22
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 744--745
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 []\T1/phv/m/n/12 Základní in-for-mace o ges-tech [On-line]. 2023 CEMI MBA Stu-d
 ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 744--745
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
 \T1/phv/m/n/12 s.r.o. [cit. 2020-08-24]. Do-stupné z: []$\T1/cmtt/m/n/12 https 
 : / / www . cemi . cz / blog /
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
-50.
+46.
 (C:\Users\OEM\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-Underfull \hbox (badness 1168) in paragraph at lines 750--752
+Underfull \hbox (badness 1168) in paragraph at lines 746--748
 []\T1/phv/m/n/12 Knihovna math v py-thonu Co-py-right \TS1/phv/m/n/12 © \T1/phv
 /m/n/12 2023 it-ne-twork.cz. []$\T1/cmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 756--758
+Underfull \hbox (badness 1852) in paragraph at lines 752--754
 []\T1/phv/m/n/12 Komunikace s ar-dui-nem 2 Co-py-right \TS1/phv/m/n/12 © \T1/ph
 v/m/n/12 2023 Ci-r-cuit Di-gest. All rights
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 756--758
+Underfull \hbox (badness 10000) in paragraph at lines 752--754
 \T1/phv/m/n/12 re-ser-ved. []$\T1/cmtt/m/n/12 https : / / circuitdigest . com /
  microcontroller-[]projects /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--760
+Underfull \hbox (badness 10000) in paragraph at lines 754--756
 []\T1/phv/m/n/12 Zkou²ka funk£-nosti []$\T1/cmtt/m/n/12 https : / / docs . ardu
 ino . cc / learn / electronics /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--762
+Underfull \hbox (badness 10000) in paragraph at lines 756--758
 []\T1/phv/m/n/12 Zkou²ka funk£-nosti []$\T1/cmtt/m/n/12 https : / / problemsolv
 ingwithpython . com /
  []
@@ -1073,20 +1073,20 @@ Package rerunfilecheck Info: File `dokumentace.out' has not changed.
 ### simple group (level 1) entered at line 247 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18408 strings out of 475247
- 294758 string characters out of 5758735
+ 18406 strings out of 475247
+ 294740 string characters out of 5758735
  1951785 words of memory out of 5000000
- 39461 multiletter control sequences out of 15000+600000
- 621976 words of font info for 103 fonts, out of 8000000 for 9000
+ 39460 multiletter control sequences out of 15000+600000
+ 619086 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,97p,593b,1686s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,97p,593b,1622s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\OEM\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ectt1200.pk><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 /helvetic/uhvb8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmb8a.pfb><C:/Users/OEM/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 /times/utmr8a.pfb>
-Output written on dokumentace.pdf (30 pages, 3006653 bytes).
+Output written on dokumentace.pdf (30 pages, 3005930 bytes).
 PDF statistics:
  461 PDF objects out of 1000 (max. 8388607)
  147 named destinations out of 1000 (max. 500000)
